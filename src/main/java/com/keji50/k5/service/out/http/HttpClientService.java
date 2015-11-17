@@ -1,23 +1,9 @@
-/**
- * DefaultHttpClient.java
- * com.howbuy.gwsgateway.common.http
- *
- * Function： TODO 
- *
- *   ver     date      		author
- * ──────────────────────────────────
- *   		 2015年9月16日 		chao.li
- *
- * Copyright (c) 2015, Howbuy Rights Reserved.
- */
-
 package com.keji50.k5.service.out.http;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpRequestRetryHandler;
 import org.apache.http.client.config.RequestConfig;

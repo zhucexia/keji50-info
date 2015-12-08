@@ -10,8 +10,9 @@
     http://www.springframework.org/schema/aop/spring-aop.xsd">
 
 	<!-- 加载系统配置文件 -->
-	<bean id="propertyConfigurer"
-		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	<!-- <bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"> -->
+	<bean id="propertyConfigurer" class="com.keji50.k5.common.spring.CustomizedPropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
 				<value>classpath:config.properties</value>

@@ -44,42 +44,4 @@
 			<tx:method name="*" propagation="SUPPORTS" read-only="true" />
 		</tx:attributes>
 	</tx:advice>
-	
-	<bean id="httpClientService" class="com.keji50.k5.service.out.http.HttpClientService">
-		<property name="socketTimeout" value="${httpclient.socketTimeout}" />
-		<property name="connectTimeout" value="${httpclient.connectTimeout}" />
-		<property name="connectionRequestTimeout" value="${httpclient.connectionRequestTimeout}" />
-	</bean>
-	
-	<bean id="smsGatewayService" class="com.keji50.k5.service.out.sms.SmsGatewayService">
-		<property name="smsUrl" value="${sms.url}" />
-		<property name="account" value="${sms.account}" />
-		<property name="password" value="${sms.password}" />
-		<property name="httpClientService" ref="httpClientService" />
-	</bean>
-	
-	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
-	<property name="host" value="${email.host}" />
-	<property name="username" value="${email.username}" />
-	<property name="password" value="${email.password}" />
-	<property name="javaMailProperties">
-		<props>
-			<prop key="mail.smtp.auth">true</prop>
-			<prop key="mail.smtp.from">${email.from}</prop>
-			<prop key="mail.smtps.ssl.checkserveridentity">true</prop>
-            <prop key="mail.smtps.ssl.trust">*</prop>
-			<prop key="mail.smtp.port">465</prop>
-			<prop key="mail.smtp.socketFactory.port">465</prop>
-			<prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
-			<prop key="mail.smtp.socketFactory.fallback">false</prop>
-			<prop key="mail.debug">true</prop>
-		</props>
-	</property>
-</bean>
-	
-	<bean id="emailGatewayService" class="com.keji50.k5.service.out.email.EmailGatewayService">
-		<property name="baseValidationUrl" value="${email.validation.url}" />
-		<property name="mailFrom" value="${email.from}" />
-		<property name="mailSender" ref="mailSender" />
-	</bean>
 </beans>

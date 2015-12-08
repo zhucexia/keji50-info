@@ -16,16 +16,14 @@
 		<spring.version>3.2.12.RELEASE</spring.version>
 		<mybatis.version>3.2.8</mybatis.version>
 		<aspectj.version>1.6.8</aspectj.version>
-		<!-- <atomikos.version>3.9.3</atomikos.version> -->
 		<druid.version>0.2.9</druid.version>
 		<mybatis.version>3.2.8</mybatis.version>
 		<org.mybatis.version>1.2.2</org.mybatis.version>
-		<mysql.version>5.1.14</mysql.version>
+		<mysql.version>5.1.26</mysql.version>
 		<pagehelper.version>3.6.3</pagehelper.version>
 		<javax.validation.version>1.1.0.Final</javax.validation.version>
 		<org.hibernate.version>4.1.0.Final</org.hibernate.version>
 		<org.codehaus.jackson.version>1.9.13</org.codehaus.jackson.version>
-		<commons-fileupload.version>1.2</commons-fileupload.version>
 		<commons-lang.version>2.6</commons-lang.version>
 		<fastjson.version>1.1.41</fastjson.version>
 		<slf4j.version>1.7.5</slf4j.version>
@@ -33,7 +31,6 @@
 		<httpclient.version>4.5</httpclient.version>
 		<commons-httpclient.version>3.0.1</commons-httpclient.version>
 		<dom4j.version>1.6.1</dom4j.version>
-		<javax.mail.version>1.4.3</javax.mail.version>
 		<jaxen.version>1.1.6</jaxen.version>
 	</properties>
 	<dependencies>
@@ -114,21 +111,6 @@
 		</dependency>
 
 		<!-- 持久相关 -->
-		<!-- <dependency>
-			<groupId>com.atomikos</groupId>
-			<artifactId>atomikos-util</artifactId>
-			<version>${atomikos.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.atomikos</groupId>
-			<artifactId>transactions</artifactId>
-			<version>${atomikos.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.atomikos</groupId>
-			<artifactId>transactions-jdbc</artifactId>
-			<version>${atomikos.version}</version>
-		</dependency> -->
 		<dependency>
 			<groupId>com.alibaba.druid</groupId>
 			<artifactId>druid-wrapper</artifactId>
@@ -159,22 +141,6 @@
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
 			<version>${org.codehaus.jackson.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>commons-fileupload</groupId>
-			<artifactId>commons-fileupload</artifactId>
-			<version>${commons-fileupload.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>junit</groupId>
-					<artifactId>junit</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>commons-io</groupId>
-					<artifactId>commons-io</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 
 		<!-- log -->
@@ -238,11 +204,6 @@
 			<groupId>commons-lang</groupId>
 			<artifactId>commons-lang</artifactId>
 			<version>${commons-lang.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>javax.mail</groupId>
-			<artifactId>mail</artifactId>
-			<version>${javax.mail.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>jaxen</groupId>

@@ -85,12 +85,6 @@
 		</property>
 	</bean>
 
-	<!-- 上传文件工具 Resolver -->
-	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-		<property name="defaultEncoding" value="utf-8" />
-		<property name="maxUploadSize" value="10000000" />
-	</bean>
-
 	<bean id="pathMethodNameResolver"
 		class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver" />
 

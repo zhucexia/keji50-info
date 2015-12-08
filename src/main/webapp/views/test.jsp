@@ -2,9 +2,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
-<%-- <c:import url="http://localhost:8080/common/f-banner.jsp" /> --%>
-
-<iframe src="http://localhost:8080/common/f-banner.jsp" width="100%"></iframe>
 
 
-<iframe src="http://localhost:8080/common/f-footer.jsp" width="100%"></iframe>
+<iframe style="display:none;" name="iframe" src="http://localhost:8580/common/login-user.jsp" width="100%"></iframe>
+<script>
+window.onload = function(){
+	var a = window.frames["iframe"].document.body.innerHTML;
+	console.log(a);
+}
+</script>

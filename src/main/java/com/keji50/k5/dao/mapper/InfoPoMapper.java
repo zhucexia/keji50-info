@@ -32,6 +32,13 @@ public interface InfoPoMapper {
 	 * @return
 	 */
 	InfoPo selectById(int id);
+	
+	/**
+	 * 获取下一篇文章
+	 * @param id
+	 * @return
+	 */
+	InfoPo selectNextById(int id);
 
 	/**
 	 * 获取首页推荐文章列表

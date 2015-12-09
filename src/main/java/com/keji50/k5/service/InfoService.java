@@ -70,6 +70,19 @@ public class InfoService {
 
 		return infoPoMapper.selectById(id);
 	}
+	
+	/**
+	 * 查询当前文章的下一篇文章
+	 * @param id
+	 * @return
+	 */
+	public InfoPo getNextInfoById(int id) {
+		if (id <= 0) {
+			return null;
+		}
+		
+		return infoPoMapper.selectNextById(id);
+	}
 
 	/**
 	 * 获取作者最近文章集合
@@ -102,9 +115,7 @@ public class InfoService {
 			System.out.println(info);
 		}
 
-		Thread.sleep(10 * 1000);
-		
-		System.out.println(service.getHotInfos());
+		System.out.println(service.getNextInfoById(1));
 	}
 
 }

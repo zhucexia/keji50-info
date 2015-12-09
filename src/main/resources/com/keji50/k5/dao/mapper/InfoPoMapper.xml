@@ -61,6 +61,13 @@
 		where a.state = 's' and a.id = #{id, jdbcType=DECIMAL}
 	</select>
 	
+	<select id="selectNextById" resultMap="InfoResultMap">
+		select <include refid="Info_Column_List" />, a.content, <include refid="Account_Column_List" /> from info a
+		left join account b on a.author_id = b.id
+		where a.state = 's' and a.id > #{id, jdbcType=DECIMAL}
+		order by id asc limit 1
+	</select>
+	
 	<select id="selectByAuthor" resultMap="InfoResultMap">
 		select id, title, image from info
 		where state = 's' and author_id = #{authorId, jdbcType=DECIMAL}

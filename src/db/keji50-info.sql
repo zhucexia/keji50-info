@@ -16,6 +16,8 @@ CREATE TABLE `info_category` (
   UNIQUE KEY `info_category_code` (`code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='资讯类别信息表';
 
+insert into info_category(code, name, color_code, state) values ('BigData', '大数据', '#FFC125', 's');
+
 -- ----------------------------
 -- 资讯信息表
 -- ----------------------------
@@ -27,8 +29,9 @@ CREATE TABLE `info` (
   `title` varchar(200) NOT NULL COMMENT '资讯标题',
   `image` varchar(200) NOT NULL COMMENT '展示图片',
   `short_desc` varchar(200) COMMENT '资讯简述',
-  `context` text NOT NULL COMMENT '资讯内容',
+  `content` text NOT NULL COMMENT '资讯内容',
   `tags` varchar(64) COMMENT '标签集， 格式 标签1|标签2|标签3',
+  `suggest` varchar(1) DEFAULT '0' COMMENT '首页推荐  1是   0不是',
   `create_date` datetime NOT NULL COMMENT '创建时间',
   `update_date` datetime COMMENT '更新时间',
   `state` varchar(1) COLLATE utf8_bin DEFAULT 'c' COMMENT '数据状态   c:草稿 s;已审核 d:删除',

@@ -1,11 +1,10 @@
 package com.keji50.k5.service;
 
-import com.keji50.k5.common.utils.constants.States;
-import com.keji50.k5.dao.mapper.InfoCategoryPoMapper;
-import com.keji50.k5.dao.po.InfoCategoryPo;
 import java.util.List;
-import javax.annotation.Resource;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.stereotype.Service;
+import com.keji50.k5.dao.po.InfoCategoryPo;
 
 /**
  * 文章目录业务service
@@ -20,11 +19,8 @@ import org.springframework.stereotype.Service;
 @Service(value = "infoCategoryService")
 public class InfoCategoryService {
 
-    @Resource(name = "infoCategoryPoMapper")
-    private InfoCategoryPoMapper infoCategoryPoMapper;
+    @Setter @Getter
+    private volatile List<InfoCategoryPo> infoCatetories;
     
-    public List<InfoCategoryPo> getAllCategories() {
-        return infoCategoryPoMapper.getCategories(States.ONLINE.toString());
-    }
 }
 

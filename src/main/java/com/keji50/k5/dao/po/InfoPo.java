@@ -15,9 +15,12 @@ package com.keji50.k5.dao.po;
 
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
+
 import lombok.Data;
+
 import org.apache.commons.lang.StringUtils;
 
 /**
@@ -66,13 +69,18 @@ public class InfoPo {
     /**
      * 文章全文
      */
-    private String context;
+    private String content;
 
     /**
      * 文章标签 格式 ： 标签1|标签2|标签3
      */
     private String tags;
 
+    /**
+     * 是否首页推荐 1是  0不是
+     */
+    private String suggest;
+    
     /**
      * 创建时间
      */
@@ -89,10 +97,14 @@ public class InfoPo {
     private String state;
 
     public List<String> getTags() {
-        return Arrays.asList(StringUtils.split(tags, '|'));
+    	List<String> tagList = Collections.emptyList();
+    	if (StringUtils.isNotEmpty(tags)) {
+    		tagList = Arrays.asList(StringUtils.split(tags, '|'));
+    	}
+        return tagList;
     }
 
     public String getCreateDate() {
-        return new SimpleDateFormat("yyyyMMdd HH:mm:ss").format(createDate);
+        return createDate == null ? "" : new SimpleDateFormat("yyyyMMdd HH:mm:ss").format(createDate);
     }
 }

@@ -21,8 +21,9 @@
 		<result property="title" column="title" jdbcType="VARCHAR" />
 		<result property="image" column="image" jdbcType="VARCHAR" />
 		<result property="shortDesc" column="short_desc" jdbcType="VARCHAR" />
-		<result property="context" column="context" jdbcType="VARCHAR" />
+		<result property="content" column="content" jdbcType="VARCHAR" />
 		<result property="tags" column="tags" jdbcType="VARCHAR" />
+		<result property="suggest" column="suggest" jdbcType="VARCHAR"/>
 		<result property="createDate" column="create_date" jdbcType="TIMESTAMP" />
 		<result property="updateDate" column="update_date" jdbcType="TIMESTAMP" />
 		<result property="state" column="state" jdbcType="VARCHAR" />
@@ -30,18 +31,17 @@
 		<association property="infoCategory" column="info_category_id" resultMap="CategoryResultMap" />
 	</resultMap>
 	<sql id="Info_Column_List">
-		id, info_category_id, author_id, title, image, short_desc,
-		context, tags, create_date, state
+		a.id, a.info_category_id, a.author_id, a.title, a.image, a.short_desc, a.tags, a.create_date
 	</sql>
-	<sql id="All_Column_List">
-		a.id, a.info_category_id, a.author_id, a.title, a.image,
-		a.short_desc, a.context, a.tags, a.create_date, a.state,
-		b.username, b.email, b.nickname, b.image as account_image,
+	<sql id="Account_Column_List">
+		b.username, b.email, b.nickname, b.image as account_image
+	</sql>
+	<sql id="Category_Column_List">
 		c.name as info_category_name, c.color_code
 	</sql>
 
 	<select id="selectByCondition" resultMap="InfoResultMap">
-		select <include refid="All_Column_List" /> from info a
+		select <include refid="Info_Column_List" />, <include refid="Account_Column_List" />, <include refid="Category_Column_List" /> from info a
 		left join account b on a.author_id = b.id
 		left join info_category c on
 		a.info_category_id = c.id
@@ -53,6 +53,30 @@
 			and a.author_id = #{authorId, jdbcType=DECIMAL}
 		</if>
 		order by create_date desc
+	</select>
+	
+	<select id="selectById" resultMap="InfoResultMap">
+		select <include refid="Info_Column_List" /> , a.content, <include refid="Account_Column_List" /> from info a
+		left join account b on a.author_id = b.id
+		where a.state = 's' and a.id = #{id, jdbcType=DECIMAL}
+	</select>
+	
+	<select id="selectByAuthor" resultMap="InfoResultMap">
+		select id, title, image from info
+		where state = 's' and author_id = #{authorId, jdbcType=DECIMAL}
+		order by create_date desc
+	</select>
+	
+	<select id="selectSuggest" resultMap="InfoResultMap">
+		select a.id, a.title, a.image, a.info_category_id, <include refid="Category_Column_List" /> from info a
+		left join info_category c on a.info_category_id = c.id
+		where a.state = 's' and a.suggest = '1' order by update_date desc limit 6
+	</select>
+	
+	<select id="selectHots" resultMap="InfoResultMap">
+		select id, title, image from info
+		where state = 's'
+		order by create_date desc limit 6
 	</select>
 
 </mapper>

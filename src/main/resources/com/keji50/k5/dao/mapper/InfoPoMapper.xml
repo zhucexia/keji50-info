@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.keji50.k5.dao.mapper.InfoPoMapper">
+
+	<resultMap id="AccountResultMap" type="com.keji50.k5.dao.po.AccountPo">
+		<id column="author_id" property="id" jdbcType="DECIMAL" />
+		<result column="username" property="username" jdbcType="VARCHAR" />
+		<result column="email" property="email" jdbcType="VARCHAR" />
+		<result column="nickname" property="nickname" jdbcType="VARCHAR" />
+		<result column="author_image" property="image" jdbcType="VARCHAR" />
+	</resultMap>
+	
+	<resultMap id="CategoryResultMap" type="com.keji50.k5.dao.po.InfoCategoryPo">
+		<id column="info_category_id" property="id" jdbcType="DECIMAL" />
+		<result column="info_category_name" property="name" jdbcType="VARCHAR" />
+		<result column="color_code" property="colorCode" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<resultMap id="InfoResultMap" type="com.keji50.k5.dao.po.InfoPo">
+		<id property="id" column="id" jdbcType="DECIMAL" />
+		<result property="title" column="title" jdbcType="VARCHAR" />
+		<result property="image" column="image" jdbcType="VARCHAR" />
+		<result property="shortDesc" column="short_desc" jdbcType="VARCHAR" />
+		<result property="context" column="context" jdbcType="VARCHAR" />
+		<result property="tags" column="tags" jdbcType="VARCHAR" />
+		<result property="createDate" column="create_date" jdbcType="TIMESTAMP" />
+		<result property="updateDate" column="update_date" jdbcType="TIMESTAMP" />
+		<result property="state" column="state" jdbcType="VARCHAR" />
+		<association property="author" column="author_id" resultMap="AccountResultMap" />
+		<association property="infoCategory" column="info_category_id" resultMap="CategoryResultMap" />
+	</resultMap>
+	<sql id="Info_Column_List">
+		id, info_category_id, author_id, title, image, short_desc,
+		context, tags, create_date, state
+	</sql>
+	<sql id="All_Column_List">
+		a.id, a.info_category_id, a.author_id, a.title, a.image,
+		a.short_desc, a.context, a.tags, a.create_date, a.state,
+		b.username, b.email, b.nickname, b.image as account_image,
+		c.name as info_category_name, c.color_code
+	</sql>
+
+	<select id="selectByCondition" resultMap="InfoResultMap">
+		select <include refid="All_Column_List" /> from info a
+		left join account b on a.author_id = b.id
+		left join info_category c on
+		a.info_category_id = c.id
+		where a.state = 's'
+		<if test="infoCategoryId != null and infoCategoryId > 0">
+			and a.info_category_id = #{infoCategoryId, jdbcType=DECIMAL}
+		</if>
+		<if test="authorId != null and authorId > 0">
+			and a.author_id = #{authorId, jdbcType=DECIMAL}
+		</if>
+		order by create_date desc
+	</select>
+
+</mapper>

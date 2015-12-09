@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.keji50.k5.dao.mapper.InfoCategoryPoMapper">
+	<resultMap id="CategoryResultMap" type="com.keji50.k5.dao.po.InfoCategoryPo">
+		<id column="id" property="id" jdbcType="DECIMAL" />
+		<result column="code" property="code" jdbcType="VARCHAR" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="color_code" property="colorCode" jdbcType="VARCHAR" />
+		<result column="state" property="state" jdbcType="VARCHAR" />
+		<result column="parent" property="parent" jdbcType="DECIMAL" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, code, name, color_code, state
+	</sql>
+
+	<!-- 查询文章目录内容 -->
+	<select id="getCategories" resultMap="CategoryResultMap">
+		select <include refid="Base_Column_List" /> from info_category where state = #{state,jdbcType=VARCHAR}
+	</select>
+
+</mapper>

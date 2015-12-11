@@ -1,0 +1,22 @@
+文章详情 <br>
+$info
+
+<br>
+<br>
+
+最近文章 <br>
+#foreach($info in $infosNearby)
+	$info.id : $info.title <br>
+#end
+
+<br>
+<br>
+
+文章总数<br>
+$infosTotal
+
+<br>
+<br>
+
+热门文章<br>
+$infosHot

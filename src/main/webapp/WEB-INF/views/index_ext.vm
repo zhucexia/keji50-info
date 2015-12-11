@@ -1,0 +1,7 @@
+#set ($root = $rc.getContextPath())
+
+Hello velocity
+
+$categories
+
+<br>

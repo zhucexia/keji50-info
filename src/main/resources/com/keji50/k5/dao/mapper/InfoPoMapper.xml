@@ -97,7 +97,7 @@
 		order by id desc
 	</select>
 	
-	<select id="selectSuggest" resultMap="InfoResultMap">
+	<select id="selectSuggests" resultMap="InfoResultMap">
 		select a.id, a.title, a.image, a.info_category_id, <include refid="Category_Column_List" /> from info a
 		left join info_category c on a.info_category_id = c.id
 		where a.state = 's' and a.suggest = '1' order by update_date desc limit 6

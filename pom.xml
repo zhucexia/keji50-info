@@ -22,24 +22,50 @@
 		<mysql.version>5.1.26</mysql.version>
 		<pagehelper.version>3.6.3</pagehelper.version>
 		<javax.validation.version>1.1.0.Final</javax.validation.version>
-		<org.hibernate.version>4.1.0.Final</org.hibernate.version>
 		<org.codehaus.jackson.version>1.9.13</org.codehaus.jackson.version>
 		<commons-lang.version>2.6</commons-lang.version>
 		<fastjson.version>1.1.41</fastjson.version>
 		<slf4j.version>1.7.5</slf4j.version>
 		<logback.version>1.0.8</logback.version>
-		<httpclient.version>4.5</httpclient.version>
-		<commons-httpclient.version>3.0.1</commons-httpclient.version>
-		<dom4j.version>1.6.1</dom4j.version>
 		<jaxen.version>1.1.6</jaxen.version>
+		<velocity.version>1.7</velocity.version>
+		<velocity-tools.version>2.0</velocity-tools.version>
 	</properties>
+	
+	<repositories>
+        <repository>
+            <id>local</id>
+            <name>Repository in project's repos dir</name>
+            <layout>default</layout>
+            <url>${project.baseUri}repos</url>
+        </repository>
+    </repositories>
+	
 	<dependencies>
+		<!-- 页面模板velocity 相关依赖 -->
+        <dependency>
+            <groupId>com.baidu.fis</groupId>
+            <artifactId>fis-velocity-tools</artifactId>
+            <version>2.11</version>
+        </dependency>
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity</artifactId>
+			<version>${velocity.version}</version>
+		</dependency>
 
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity-tools</artifactId>
+			<version>${velocity-tools.version}</version>
+		</dependency>
+		
 		<!-- WEB标包 本地调试注释掉javax.servlet、javax.servlet.jsp、javax.el -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>${javax.servlet.version}</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>jstl</groupId>
@@ -178,27 +204,6 @@
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
 			<version>${fastjson.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-httpclient</groupId>
-			<artifactId>commons-httpclient</artifactId>
-			<version>${commons-httpclient.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>commons-codec</groupId>
-					<artifactId>commons-codec</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
-			<version>${httpclient.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>dom4j</groupId>
-			<artifactId>dom4j</artifactId>
-			<version>${dom4j.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-lang</groupId>

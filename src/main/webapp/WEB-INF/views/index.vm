@@ -1,0 +1,18 @@
+#include("index_ext.vm")
+#parse("index_ext.vm")
+<ul>
+#foreach($category in $categories)
+	<li>$category.name | $velocityCount</li>
+#end
+</ul>
+
+<br>
+#if($categories)
+	test if succeed
+#else
+	test else succeed
+#end
+
+$categories.size()
+
+$root

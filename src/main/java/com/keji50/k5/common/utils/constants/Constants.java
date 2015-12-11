@@ -23,4 +23,14 @@ public class Constants {
      */
     public final static String DEFAULT_ACCOUNT_IMAGE = CustomizedPropertyPlaceholderConfigurer.getContextProperty("account.default.image");
 
+    public final static String INFO_CATEGORY_ID = "info_category_id";
+    
+    public final static String INFO_ID = "info_id";
+    
+    public final static String INFO_OFFSET = "offset";
+    
+    public final static String AUTHOR_ID = "author_id";
+    
+    public final static String COMMAND = "d";
+    
 }

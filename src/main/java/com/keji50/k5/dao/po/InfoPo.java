@@ -77,10 +77,10 @@ public class InfoPo {
     private String tags;
 
     /**
-     * 是否首页推荐 1是  0不是
+     * 是否首页推荐 1是 0不是
      */
     private String suggest;
-    
+
     /**
      * 创建时间
      */
@@ -97,10 +97,10 @@ public class InfoPo {
     private String state;
 
     public List<String> getTags() {
-    	List<String> tagList = Collections.emptyList();
-    	if (StringUtils.isNotEmpty(tags)) {
-    		tagList = Arrays.asList(StringUtils.split(tags, '|'));
-    	}
+        List<String> tagList = Collections.emptyList();
+        if (StringUtils.isNotEmpty(tags)) {
+            tagList = Arrays.asList(StringUtils.split(tags, '|'));
+        }
         return tagList;
     }
 

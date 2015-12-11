@@ -46,13 +46,36 @@
 		left join info_category c on
 		a.info_category_id = c.id
 		where a.state = 's'
-		<if test="infoCategoryId != null and infoCategoryId > 0">
-			and a.info_category_id = #{infoCategoryId, jdbcType=DECIMAL}
+		<if test="info_category_id != null and info_category_id > 0">
+			and a.info_category_id = #{info_category_id, jdbcType=DECIMAL}
 		</if>
-		<if test="authorId != null and authorId > 0">
-			and a.author_id = #{authorId, jdbcType=DECIMAL}
+		<if test="author_id != null and author_id > 0">
+			and a.author_id = #{author_id, jdbcType=DECIMAL}
 		</if>
-		order by create_date desc
+		order by id desc
+	</select>
+	
+	<select id="selectByConditionCommand" resultMap="InfoResultMap">
+		select <include refid="Info_Column_List" />, <include refid="Account_Column_List" />, <include refid="Category_Column_List" /> from info a
+		left join account b on a.author_id = b.id
+		left join info_category c on
+		a.info_category_id = c.id
+		where a.state = 's'
+		<if test="info_category_id != null and info_category_id > 0">
+			and a.info_category_id = #{info_category_id, jdbcType=DECIMAL}
+		</if>
+		<if test="author_id != null and author_id > 0">
+			and a.author_id = #{author_id, jdbcType=DECIMAL}
+		</if>
+		<if test="offset > 0">
+			<if test="d == 'previous'">
+				and a.id &gt; #{offset, jdbcType=DECIMAL}	
+			</if>
+			<if test="d == 'next'">
+				and a.id &lt; #{offset, jdbcType=DECIMAL}
+			</if>
+		</if>
+		order by id desc limit 10
 	</select>
 	
 	<select id="selectById" resultMap="InfoResultMap">
@@ -64,14 +87,14 @@
 	<select id="selectNextById" resultMap="InfoResultMap">
 		select <include refid="Info_Column_List" />, a.content, <include refid="Account_Column_List" /> from info a
 		left join account b on a.author_id = b.id
-		where a.state = 's' and a.id > #{id, jdbcType=DECIMAL}
-		order by id asc limit 1
+		where a.state = 's' and a.id &lt; #{id, jdbcType=DECIMAL}
+		order by id desc limit 1
 	</select>
 	
 	<select id="selectByAuthor" resultMap="InfoResultMap">
 		select id, title, image from info
 		where state = 's' and author_id = #{authorId, jdbcType=DECIMAL}
-		order by create_date desc
+		order by id desc
 	</select>
 	
 	<select id="selectSuggest" resultMap="InfoResultMap">
@@ -83,7 +106,7 @@
 	<select id="selectHots" resultMap="InfoResultMap">
 		select id, title, image from info
 		where state = 's'
-		order by create_date desc limit 6
+		order by id desc limit 6
 	</select>
 
 </mapper>

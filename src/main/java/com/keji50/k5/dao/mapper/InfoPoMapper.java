@@ -17,48 +17,63 @@ import com.keji50.k5.dao.po.InfoPo;
  */
 public interface InfoPoMapper {
 
-	/**
-	 * 根据搜索条件分页查找文章
-	 * 
-	 * @param conditions
-	 * @return
-	 */
-	Page<InfoPo> selectByCondition(Map<String, Object> conditions);
+    /**
+     * 根据搜索条件分页查找文章
+     * 
+     * @param conditions
+     * @return
+     */
+    Page<InfoPo> selectByCondition(Map<String, Object> conditions);
+    
+    /**
+     * 
+     * 取当前文章前面
+     *
+     * @param  @param conditions
+     * @param  @param offset
+     * @param  @param command
+     * @param  @return    设定文件
+     * @return List<InfoPo>    DOM对象
+     * @throws 
+     * @since  　Ver 1.1
+     */
+    List<InfoPo> selectByConditionCommand(Map<String, Object> conditions);
 
-	/**
-	 * 根据文章id获取文章
-	 * 
-	 * @param id
-	 * @return
-	 */
-	InfoPo selectById(int id);
-	
-	/**
-	 * 获取下一篇文章
-	 * @param id
-	 * @return
-	 */
-	InfoPo selectNextById(int id);
+    /**
+     * 根据文章id获取文章
+     * 
+     * @param id
+     * @return
+     */
+    InfoPo selectById(int id);
 
-	/**
-	 * 获取首页推荐文章列表
-	 * 
-	 * @return
-	 */
-	List<InfoPo> selectSuggests();
-	
-	/**
-	 * 获取热门文章列表
-	 * 
-	 * @return
-	 */
-	List<InfoPo> selectHots();
+    /**
+     * 获取下一篇文章
+     * 
+     * @param id
+     * @return
+     */
+    InfoPo selectNextById(int id);
 
-	/**
-	 * 查询用户最新文章列表
-	 * 
-	 * @param authorId
-	 * @return
-	 */
-	Page<InfoPo> selectByAuthor(int authorId);
+    /**
+     * 获取首页推荐文章列表
+     * 
+     * @return
+     */
+    List<InfoPo> selectSuggests();
+
+    /**
+     * 获取热门文章列表
+     * 
+     * @return
+     */
+    List<InfoPo> selectHots();
+
+    /**
+     * 查询用户最新文章列表
+     * 
+     * @param authorId
+     * @return
+     */
+    Page<InfoPo> selectByAuthor(int authorId);
 }

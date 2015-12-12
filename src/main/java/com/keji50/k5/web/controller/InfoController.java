@@ -1,6 +1,8 @@
 package com.keji50.k5.web.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.github.pagehelper.Page;
+import com.keji50.k5.common.utils.WebUtils;
 import com.keji50.k5.common.utils.constants.Command;
 import com.keji50.k5.common.utils.constants.Constants;
 import com.keji50.k5.dao.po.InfoPo;
@@ -77,30 +79,46 @@ public class InfoController {
         return "detail";
     }
 
-    @RequestMapping(value = "/p", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "/p", method = RequestMethod.GET)
     @ResponseBody
-    public List<InfoPo> ajaxInfos(HttpServletRequest request) {
-        return infoService.getInfos(getInfoOffset(request), getCommand(request));
+    public JSONObject ajaxInfos(HttpServletRequest request) {
+        try {
+            List<InfoPo> infos = infoService.getInfos(getInfoOffset(request), getCommand(request));
+            return WebUtils.toResponse(infos);
+        } catch (Exception e) {
+            return WebUtils.toFailedResponse();
+        }
+
     }
 
-    @RequestMapping(value = "/category/{id}", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "/category/{id}", method = RequestMethod.GET)
     @ResponseBody
-    public List<InfoPo> ajaxInfosByCategory(@PathVariable("id") int infocategoryId, HttpServletRequest request) {
+    public JSONObject ajaxInfosByCategory(@PathVariable("id") int infocategoryId, HttpServletRequest request) {
         if (infocategoryId <= 0) {
-            return Collections.emptyList();
+            return WebUtils.toResponse(Collections.emptyList());
         }
 
-        return infoService.getInfosByCategory(infocategoryId, getInfoOffset(request), getCommand(request));
+        try {
+            List<InfoPo> infos = infoService.getInfosByCategory(infocategoryId, getInfoOffset(request), getCommand(request));
+            return WebUtils.toResponse(infos);
+        } catch (Exception e) {
+            return WebUtils.toFailedResponse();
+        }
     }
 
-    @RequestMapping(value = "/author/{id}", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "/author/{id}", method = RequestMethod.GET)
     @ResponseBody
-    public List<InfoPo> ajaxInfosByAuthor(@PathVariable("id") int authorId, HttpServletRequest request) {
+    public JSONObject ajaxInfosByAuthor(@PathVariable("id") int authorId, HttpServletRequest request) {
         if (authorId <= 0) {
-            return Collections.emptyList();
+            return WebUtils.toResponse(Collections.emptyList());
+        }
+        try {
+            List<InfoPo> infos = infoService.getInfosByAuthor(authorId, getInfoOffset(request), getCommand(request));
+            return WebUtils.toResponse(infos);
+        } catch (Exception e) {
+            return WebUtils.toFailedResponse();
         }
 
-        return infoService.getInfosByAuthor(authorId, getInfoOffset(request), getCommand(request));
     }
 
     private int getInfoOffset(HttpServletRequest request) {

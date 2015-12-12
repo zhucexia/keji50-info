@@ -4,6 +4,12 @@ $info
 <br>
 <br>
 
+文章作者详情 <br>
+$info.author.getNickname()
+
+<br>
+<br>
+
 最近文章 <br>
 #foreach($info in $infosNearby)
 	$info.id : $info.title <br>

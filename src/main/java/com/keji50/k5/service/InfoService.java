@@ -5,7 +5,9 @@ import com.github.pagehelper.PageHelper;
 import com.keji50.k5.common.utils.PageUtils;
 import com.keji50.k5.common.utils.constants.Command;
 import com.keji50.k5.common.utils.constants.Constants;
+import com.keji50.k5.dao.mapper.AccountPoMapper;
 import com.keji50.k5.dao.mapper.InfoPoMapper;
+import com.keji50.k5.dao.po.AccountPo;
 import com.keji50.k5.dao.po.InfoPo;
 import java.util.HashMap;
 import java.util.List;
@@ -32,6 +34,9 @@ public class InfoService {
 
     @Resource(name = "infoPoMapper")
     private InfoPoMapper infoPoMapper;
+
+    @Resource(name = "accountPoMapper")
+    private AccountPoMapper accountPoMapper;
 
     // 热门文章
     @Setter
@@ -63,29 +68,34 @@ public class InfoService {
     /**
      * 获取当前文章前10条或者后10条记录
      *
-     * @param  infoIdOffset    文章ID偏移位
-     * @param  command    previous  向前10条        next  向后10条
+     * @param infoIdOffset
+     *            文章ID偏移位
+     * @param command
+     *            previous 向前10条 next 向后10条
      * 
-     * @return List<InfoPo>    文章对象集合
-     * @throws 
-     * @since  　Ver 1.1
+     * @return List<InfoPo> 文章对象集合
+     * @throws
+     * @since 　Ver 1.1
      */
     public List<InfoPo> getInfos(int infoIdOffset, Command command) {
         Map<String, Object> conditions = new HashMap<String, Object>();
 
         return getInfosByCondition(conditions, infoIdOffset, command);
     }
-    
+
     /**
      * 指定文章栏目， 获取当前文章前10条或者后10条记录
      *
-     * @param  infoCategoryId  文章目录ID
-     * @param  infoIdOffset    文章ID偏移位
-     * @param  command    previous  向前10条        next  向后10条
+     * @param infoCategoryId
+     *            文章目录ID
+     * @param infoIdOffset
+     *            文章ID偏移位
+     * @param command
+     *            previous 向前10条 next 向后10条
      * 
-     * @return List<InfoPo>    文章对象集合
-     * @throws 
-     * @since  　Ver 1.1
+     * @return List<InfoPo> 文章对象集合
+     * @throws
+     * @since 　Ver 1.1
      */
     public List<InfoPo> getInfosByCategory(int infoCategoryId, int infoIdOffset, Command command) {
         Map<String, Object> conditions = new HashMap<String, Object>();
@@ -97,13 +107,16 @@ public class InfoService {
     /**
      * 指定作者， 获取当前文章前10条或者后10条记录
      *
-     * @param  authorId        作者ID
-     * @param  infoIdOffset    文章ID偏移位
-     * @param  command    previous  向前10条        next  向后10条
+     * @param authorId
+     *            作者ID
+     * @param infoIdOffset
+     *            文章ID偏移位
+     * @param command
+     *            previous 向前10条 next 向后10条
      * 
-     * @return List<InfoPo>    文章对象集合
-     * @throws 
-     * @since  　Ver 1.1
+     * @return List<InfoPo> 文章对象集合
+     * @throws
+     * @since 　Ver 1.1
      */
     public List<InfoPo> getInfosByAuthor(int authorId, int infoIdOffset, Command command) {
         Map<String, Object> conditions = new HashMap<String, Object>();
@@ -157,14 +170,30 @@ public class InfoService {
     }
 
     /**
+     * 查询作者用户信息
+     *
+     * @param authorId
+     *            作者id
+     * @return AccountPo DOM对象
+     * @throws
+     * @since 　Ver 1.1
+     */
+    public AccountPo getAuthorById(int authorId) {
+        return accountPoMapper.selectById(authorId);
+    }
+
+    /**
      * 
      * 按条件取当前文章 前面或者后面10条数据
      *
-     * @param  conditions      查询条件
-     * @param  infoIdOffset    文章ID偏移位
-     * @param  command    previous  向前10条        next  向后10条
+     * @param conditions
+     *            查询条件
+     * @param infoIdOffset
+     *            文章ID偏移位
+     * @param command
+     *            previous 向前10条 next 向后10条
      * 
-     * @return List<InfoPo>    文章对象集合
+     * @return List<InfoPo> 文章对象集合
      * @throws
      * @since 　Ver 1.1
      */

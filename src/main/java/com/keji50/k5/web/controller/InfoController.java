@@ -5,11 +5,14 @@ import com.github.pagehelper.Page;
 import com.keji50.k5.common.utils.WebUtils;
 import com.keji50.k5.common.utils.constants.Command;
 import com.keji50.k5.common.utils.constants.Constants;
+import com.keji50.k5.dao.po.AccountPo;
 import com.keji50.k5.dao.po.InfoPo;
 import com.keji50.k5.service.InfoCategoryService;
 import com.keji50.k5.service.InfoService;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import org.apache.commons.lang.StringUtils;
@@ -77,6 +80,33 @@ public class InfoController {
         model.addAttribute(Constants.RESPONSE_INFOS_HOT, infoService.getHotInfos());
 
         return "detail";
+    }
+
+    @RequestMapping(value = "/a/{id}", method = RequestMethod.GET)
+    public String authorInfos(@PathVariable("id") int authorId, Model model) {
+        if (authorId <= 0) {
+            return "404";
+        }
+        // 获取作者信息， 不存在则跳转到404
+        AccountPo author = infoService.getAuthorById(authorId);
+        if (author == null) {
+            return "404";
+        }
+
+        Map<String, Object> conditions = new HashMap<String, Object>();
+        conditions.put(Constants.AUTHOR_ID, authorId);
+        Page<InfoPo> infos = infoService.getInfosByCondition(conditions);
+
+        // 作者信息
+        model.addAttribute(Constants.RESPONSE_AUTHOR, author);
+        // 作者总文章数
+        model.addAttribute(Constants.RESPONSE_INFOS_TOTAL, infos.getTotal());
+        // 作者文章列表
+        model.addAttribute(Constants.RESPONSE_INFOS, infos.getResult());
+        // 热门文章列表
+        model.addAttribute(Constants.RESPONSE_INFOS_HOT, infoService.getHotInfos());
+
+        return "author";
     }
 
     @RequestMapping(value = "/p", method = RequestMethod.GET)

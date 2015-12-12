@@ -1,0 +1,20 @@
+文章列表 <br>
+$infos
+
+<br>
+<br>
+
+文章作者详情 <br>
+$author
+
+<br>
+<br>
+
+文章总数<br>
+$infosTotal
+
+<br>
+<br>
+
+热门文章<br>
+$infosHot

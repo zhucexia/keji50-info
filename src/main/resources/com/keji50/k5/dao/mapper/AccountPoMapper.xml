@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.keji50.k5.dao.mapper.AccountPoMapper">
+
+	<resultMap id="AccountResultMap" type="com.keji50.k5.dao.po.AccountPo">
+		<id column="id" property="id" jdbcType="DECIMAL" />
+		<result column="username" property="username" jdbcType="VARCHAR" />
+		<result column="email" property="email" jdbcType="VARCHAR" />
+		<result column="nickname" property="nickname" jdbcType="VARCHAR" />
+		<result column="image" property="image" jdbcType="VARCHAR" />
+	</resultMap>
+	
+	<sql id="Account_Column_List">
+		username, email, nickname, image, id
+	</sql>
+
+	<select id="selectById" resultMap="AccountResultMap">
+		select <include refid="Account_Column_List" /> from account
+		where id = #{id, jdbcType=DECIMAL}
+	</select>
+	
+
+</mapper>

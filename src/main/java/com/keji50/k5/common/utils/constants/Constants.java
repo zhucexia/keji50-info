@@ -39,6 +39,9 @@ public class Constants {
     // 文章
     public final static String RESPONSE_INFO = "info";
     
+    // 作者
+    public final static String RESPONSE_AUTHOR = "author";
+    
     // 文章列表
     public final static String RESPONSE_INFOS = "infos";
     

@@ -1,0 +1,33 @@
+#require('widget/category/category.css')
+<div id="indexNavNew">
+    <div><a href="http://m.lightinthebox.com/all-cats.html">所有分类</a></div>
+    <ul class="categoryList">
+        <li>
+        	<a href="http://m.lightinthebox.com/list/fashion_71">Fashion &amp; Clothing&nbsp;<span class="prod_count">(197450)</span></a>
+        </li>
+        <li>
+        	<a href="http://m.lightinthebox.com/list/weddings-events_1180">Weddings &amp; Events&nbsp;<span class="prod_count">(57267)</span></a>
+        </li>
+        <li>
+        	<a href="http://m.lightinthebox.com/list/home-and-garden_75">Home and Garden&nbsp;<span class="prod_count">(89846)</span></a>
+        </li>
+        <li>
+        	<a href="http://m.lightinthebox.com/list/health-and-beauty_76">Sports &amp; Lifestyle&nbsp;<span class="prod_count">(94121)</span></a>
+        </li>
+        <li>
+        	<a href="http://m.lightinthebox.com/list/electronics_2619">Phones &amp; Electronics&nbsp;<span class="prod_count">(96871)</span></a>
+        </li>
+        <li>
+        	<a href="http://m.lightinthebox.com/list/shoes_3349">Shoes&nbsp;<span class="prod_count">(43300)</span></a>
+        </li>
+        <li>
+        	<a href="http://m.lightinthebox.com/list/clearance_2394">Clearance&nbsp;<span class="prod_count">(2100)</span></a>
+        </li>
+        <li>
+        	<a href="http://m.lightinthebox.com/list/customized-products-services_23522">Customized Prints and Gifts&nbsp;<span class="prod_count">(7129)</span></a>
+        </li>
+        <li>
+        	<a href="http://m.lightinthebox.com/list/flash-sale_6829">Flash Sale&nbsp;<span class="prod_count">(110082)</span></a>
+        </li>	
+    </ul>
+</div>

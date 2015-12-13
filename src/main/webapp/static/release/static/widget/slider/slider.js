@@ -1,0 +1,1 @@
+define("widget/slider/slider",["require", "exports", "module", "components/swiper/swiper"],function(e, i, n){{var o=e("components/swiper/swiper");n.exports=function(e){new o(e.container,{pagination:e.pagination,paginationClickable:!0,loop:!0,autoplay:2500})}}});

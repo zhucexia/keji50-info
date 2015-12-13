@@ -1,0 +1,17 @@
+#require('widget/contact/contact.css')
+<a id="contact" href="javascript:;">
+	<i class="contact-icon"></i>
+</a>
+<div id="mask">
+	<div id="mask-in">
+		<img src="/static/widget/contact/image/qrcode.jpg" class="qrcode"/>
+		<p class="qrtip">扫一扫上面的二维码，加我微信<br>微信号 : 15952759640</p>
+	</div>	
+</div>	
+#script()
+require(['widget/contact/contact'], function(app) {
+    app({
+    	dom : "#contact"
+    	});
+});
+#end

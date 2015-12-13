@@ -1,0 +1,114 @@
+.article {
+    font-size: 17px;
+    line-height: 1.8;
+    word-break: break-all;
+    word-wrap: break-word
+}
+
+@media (max-width: 800px) {
+    .article {
+        font-size: 16px;
+        line-height: 1.8;
+        overflow: hidden
+    }
+}
+
+.article a {
+    color: #3da9f7
+}
+
+.article a:hover {
+    color: #2c79b0
+}
+
+.article u {
+    text-decoration: none
+}
+
+.article p,
+.article h3,
+.article h4,
+.article h5,
+.article h6,
+.article pre,
+.article pre,
+.article ul,
+.article ol,
+.article dl,
+.article form,
+.article table,
+.article blockquote,
+.article iframe {
+    margin-bottom: 30px
+}
+
+@media (max-width: 800px) {
+    .article p,
+    .article h3,
+    .article h4,
+    .article h5,
+    .article h6,
+    .article pre,
+    .article pre,
+    .article ul,
+    .article ol,
+    .article dl,
+    .article form,
+    .article table,
+    .article blockquote,
+    .article iframe {
+        margin-bottom: 30px
+    }
+}
+
+.article img {
+    max-width: 100%
+}
+
+.article ul,
+.article ol {
+    list-style: square;
+    margin-left: 20px
+}
+
+.article blockquote {
+    font-weight: 600;
+    border-left: 4px solid #3da9f7;
+    padding-left: 15px
+}
+
+@media (min-width: 800px) {
+    .article blockquote {
+        padding-left: 24px;
+        margin-left: -24px;
+        border-left: 6px solid #3da9f7
+    }
+}
+
+.article hr {
+    border: 0;
+    height: 1px;
+    width: 20%;
+    margin: 50px auto;
+    border-top: 1px solid #e4e4e4
+}
+
+.article img {
+    margin: 0 auto;
+    display: block
+}
+
+.article em {
+    background: #f6f6f6;
+    border-bottom: 1px solid #e4e4e4;
+    font-style: normal
+}
+
+.article strong,
+.article b {
+    font-weight: 600
+}
+
+.article iframe {
+    width: 100%
+}

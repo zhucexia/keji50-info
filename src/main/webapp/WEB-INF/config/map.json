@@ -1,0 +1,349 @@
+{
+    "res": {
+        "components/jquery/jquery.js": {
+            "uri": "/static/components/jquery/jquery.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "components/jquery/jquery"
+            }
+        },
+        "components/mask/mask.css": {
+            "uri": "/static/components/mask/mask.css",
+            "type": "css"
+        },
+        "components/mask/mask.js": {
+            "uri": "/static/components/mask/mask.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "components/mask/mask"
+            },
+            "deps": [
+                "zepto",
+                "components/mask/mask.css"
+            ]
+        },
+        "page/detail/detail.css": {
+            "uri": "/static/page/detail/detail.css",
+            "type": "css"
+        },
+        "page/detail/detail.vm": {
+            "uri": "/page/detail/detail.vm",
+            "type": "vm",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "page/detail/detail.css"
+            ]
+        },
+        "page/index/index.css": {
+            "uri": "/static/page/index/index.css",
+            "type": "css"
+        },
+        "page/index/index.vm": {
+            "uri": "/page/index/index.vm",
+            "type": "vm",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "page/index/index.css"
+            ]
+        },
+        "page/layout/frame/frame.vm": {
+            "uri": "/page/layout/frame/frame.vm",
+            "type": "vm",
+            "extras": {
+                "isPage": true
+            }
+        },
+        "page/layout/front/front.vm": {
+            "uri": "/page/layout/front/front.vm",
+            "type": "vm",
+            "extras": {
+                "isPage": true
+            }
+        },
+        "page/list/list.css": {
+            "uri": "/static/page/list/list.css",
+            "type": "css"
+        },
+        "page/list/list.vm": {
+            "uri": "/page/list/list.vm",
+            "type": "vm",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "page/list/list.css"
+            ]
+        },
+        "page/vm/caizhuangxilie.vm": {
+            "uri": "/page/vm/caizhuangxilie.vm",
+            "type": "vm",
+            "extras": {
+                "isPage": true
+            }
+        },
+        "page/vm/gongdenghufu.vm": {
+            "uri": "/page/vm/gongdenghufu.vm",
+            "type": "vm",
+            "extras": {
+                "isPage": true
+            }
+        },
+        "page/vm/hufuxilie.vm": {
+            "uri": "/page/vm/hufuxilie.vm",
+            "type": "vm",
+            "extras": {
+                "isPage": true
+            }
+        },
+        "page/vm/hushoushuang.vm": {
+            "uri": "/page/vm/hushoushuang.vm",
+            "type": "vm",
+            "extras": {
+                "isPage": true
+            }
+        },
+        "page/vm/jingyou.vm": {
+            "uri": "/page/vm/jingyou.vm",
+            "type": "vm",
+            "extras": {
+                "isPage": true
+            }
+        },
+        "page/vm/lihe.vm": {
+            "uri": "/page/vm/lihe.vm",
+            "type": "vm",
+            "extras": {
+                "isPage": true
+            }
+        },
+        "page/vm/list.vm": {
+            "uri": "/page/vm/list.vm",
+            "type": "vm",
+            "extras": {
+                "isPage": true
+            }
+        },
+        "page/vm/meiguixilie.vm": {
+            "uri": "/page/vm/meiguixilie.vm",
+            "type": "vm",
+            "extras": {
+                "isPage": true
+            }
+        },
+        "page/vm/pianzaihuang.vm": {
+            "uri": "/page/vm/pianzaihuang.vm",
+            "type": "vm",
+            "extras": {
+                "isPage": true
+            }
+        },
+        "page/vm/xuehuagaoxilie.vm": {
+            "uri": "/page/vm/xuehuagaoxilie.vm",
+            "type": "vm",
+            "extras": {
+                "isPage": true
+            }
+        },
+        "release/static/components/jquery/jquery.js": {
+            "uri": "/static/release/static/components/jquery/jquery.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "components/jquery/jquery"
+            }
+        },
+        "release/static/components/mask/mask.css": {
+            "uri": "/static/release/static/components/mask/mask.css",
+            "type": "css"
+        },
+        "release/static/components/mask/mask.js": {
+            "uri": "/static/release/static/components/mask/mask.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "components/zepto/zepto": "release/static/components/zepto/zepto.js"
+                },
+                "moduleId": "components/mask/mask"
+            },
+            "deps": [
+                "release/static/components/zepto/zepto.js",
+                "release/static/components/mask/mask.css"
+            ]
+        },
+        "release/static/components/swiper/swiper.css": {
+            "uri": "/static/release/static/components/swiper/swiper.css",
+            "type": "css"
+        },
+        "release/static/components/swiper/swiper.js": {
+            "uri": "/static/release/static/components/swiper/swiper.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "components/swiper/swiper"
+            },
+            "deps": [
+                "release/static/components/swiper/swiper.css"
+            ]
+        },
+        "release/static/components/zepto/zepto.js": {
+            "uri": "/static/release/static/components/zepto/zepto.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "components/zepto/zepto"
+            }
+        },
+        "release/static/js/require.js": {
+            "uri": "/static/release/static/js/require.js",
+            "type": "js"
+        },
+        "release/static/page/index/index.css": {
+            "uri": "/static/release/static/page/index/index.css",
+            "type": "css"
+        },
+        "release/static/page/list/list.css": {
+            "uri": "/static/release/static/page/list/list.css",
+            "type": "css"
+        },
+        "release/static/pkg/boot.js": {
+            "uri": "/static/release/static/pkg/boot.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "components/jquery/jquery"
+            }
+        },
+        "release/static/scss/reset.css": {
+            "uri": "/static/release/static/scss/reset.css",
+            "type": "css"
+        },
+        "release/static/widget/category/category.css": {
+            "uri": "/static/release/static/widget/category/category.css",
+            "type": "css"
+        },
+        "release/static/widget/contact/contact.css": {
+            "uri": "/static/release/static/widget/contact/contact.css",
+            "type": "css"
+        },
+        "release/static/widget/contact/contact.js": {
+            "uri": "/static/release/static/widget/contact/contact.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "components/jquery/jquery": "release/static/pkg/boot.js"
+                },
+                "moduleId": "widget/contact/contact"
+            },
+            "deps": [
+                "release/static/pkg/boot.js",
+                "release/static/widget/contact/contact.css"
+            ]
+        },
+        "release/static/widget/label/label.css": {
+            "uri": "/static/release/static/widget/label/label.css",
+            "type": "css"
+        },
+        "release/static/widget/listpanel/listpanel.css": {
+            "uri": "/static/release/static/widget/listpanel/listpanel.css",
+            "type": "css"
+        },
+        "release/static/widget/slider/slider.css": {
+            "uri": "/static/release/static/widget/slider/slider.css",
+            "type": "css"
+        },
+        "release/static/widget/slider/slider.js": {
+            "uri": "/static/release/static/widget/slider/slider.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "components/swiper/swiper": "release/static/components/swiper/swiper.js"
+                },
+                "moduleId": "widget/slider/slider"
+            },
+            "deps": [
+                "release/static/components/swiper/swiper.js",
+                "release/static/widget/slider/slider.css"
+            ]
+        },
+        "static/js/require.js": {
+            "uri": "/static/js/require.js",
+            "type": "js"
+        },
+        "static/scss/reset.css": {
+            "uri": "/static/scss/reset.css",
+            "type": "css"
+        },
+        "widget/advertise/advertise.css": {
+            "uri": "/static/widget/advertise/advertise.css",
+            "type": "css"
+        },
+        "widget/advertise/advertise.vm": {
+            "uri": "/widget/advertise/advertise.vm",
+            "type": "vm",
+            "deps": [
+                "widget/advertise/advertise.css"
+            ]
+        },
+        "widget/author/author.css": {
+            "uri": "/static/widget/author/author.css",
+            "type": "css"
+        },
+        "widget/author/author.vm": {
+            "uri": "/widget/author/author.vm",
+            "type": "vm",
+            "deps": [
+                "widget/author/author.css"
+            ]
+        },
+        "widget/category/category.css": {
+            "uri": "/static/widget/category/category.css",
+            "type": "css"
+        },
+        "widget/category/category.vm": {
+            "uri": "/widget/category/category.vm",
+            "type": "vm",
+            "deps": [
+                "widget/category/category.css"
+            ]
+        },
+        "widget/detail/detail.css": {
+            "uri": "/static/widget/detail/detail.css",
+            "type": "css"
+        },
+        "widget/detail/detail.vm": {
+            "uri": "/widget/detail/detail.vm",
+            "type": "vm",
+            "deps": [
+                "widget/detail/detail.css"
+            ]
+        },
+        "widget/footer/footer.vm": {
+            "uri": "/widget/footer/footer.vm",
+            "type": "vm"
+        },
+        "widget/header/header.vm": {
+            "uri": "/widget/header/header.vm",
+            "type": "vm"
+        },
+        "widget/hottest/hottest.css": {
+            "uri": "/static/widget/hottest/hottest.css",
+            "type": "css"
+        },
+        "widget/hottest/hottest.vm": {
+            "uri": "/widget/hottest/hottest.vm",
+            "type": "vm",
+            "deps": [
+                "widget/hottest/hottest.css"
+            ]
+        },
+        "widget/lightbox/lightbox.vm": {
+            "uri": "/widget/lightbox/lightbox.vm",
+            "type": "vm"
+        },
+        "widget/newslist/newslist.vm": {
+            "uri": "/widget/newslist/newslist.vm",
+            "type": "vm"
+        }
+    },
+    "pkg": {}
+}

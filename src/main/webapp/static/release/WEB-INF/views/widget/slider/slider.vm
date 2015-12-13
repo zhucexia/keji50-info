@@ -1,0 +1,20 @@
+#require("widget/slider/slider.css")
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><a href="#"><img src="/static/img/index/banner/banner1.jpg"/></a></div>
+        <div class="swiper-slide"><a href="#"><img src="/static/img/index/banner/banner1.jpg"/></a></div>
+        <div class="swiper-slide"><a href="#"><img src="/static/img/index/banner/banner1.jpg"/></a></div>
+        <div class="swiper-slide"><a href="#"><img src="/static/img/index/banner/banner1.jpg"/></a></div>
+        <div class="swiper-slide"><a href="#"><img src="/static/img/index/banner/banner1.jpg"/></a></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+#script()
+require(['widget/slider/slider'], function(app) {
+    app({
+        container : '.swiper-container',
+        pagination : '.swiper-pagination'
+    });
+});
+#end

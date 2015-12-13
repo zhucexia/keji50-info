@@ -1,0 +1,27 @@
+#require("widget/label/label.css")
+<ul id="label" class="label-block">
+	<li class="label-list">
+		<div class="label-left">
+			<a href="#">
+				<img src="/static/img/index/label/label1.jpg"/>
+			</a>
+		</div>
+		<div class="label-left">
+			<a href="#">
+				<img src="/static/img/index/label/label2.jpg"/>
+			</a>
+		</div>
+	</li>
+	<li class="label-list">
+		<div class="label-right">
+			<a href="#">
+				<img src="/static/img/index/label/label3.jpg"/>
+			</a>
+		</div>
+		<div class="label-right">
+			<a href="#">
+				<img src="/static/img/index/label/label4.jpg"/>
+			</a>
+		</div>
+	</li>
+</ul>

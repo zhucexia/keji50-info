@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>    <head>        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <title>玫瑰系列</title>
+        <link rel="shortcut icon" type="image/x-icon" href="/static/img/favicon.ico" />
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+            <link rel="stylesheet" type="text/css" href="/static/scss/reset.css"/><link rel="stylesheet" type="text/css" href="/static/components/swiper/swiper.css"/><link rel="stylesheet" type="text/css" href="/static/widget/slider/slider.css"/><link rel="stylesheet" type="text/css" href="/static/widget/category/category.css"/><link rel="stylesheet" type="text/css" href="/static/widget/listpanel/listpanel.css"/><link rel="stylesheet" type="text/css" href="/static/page/list/list.css"/></head>
+    <body>        <div id="wrapper">
+                            
+<div id="indexNavNew">
+    <div><b>玫瑰系列</b></div>
+</div>
+<div id="list">
+	    <div class="mod-pro-pannel">
+        <a href="#" class="a-block cfix">
+            <img src="http://52.74.102.5/icons/product/meiguixilie/haliyou.jpg" alt="" class="pic">
+            <div class="info">
+                <p class="supply-line"></p>
+                <h2>蛤蜊油</h2>
+                <p class="price-line">
+                    <span class="price">¥10</span>
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="mod-pro-pannel">
+        <a href="#" class="a-block cfix">
+            <img src="http://52.74.102.5/icons/product/meiguixilie/meiguibaoshijinghuashui.jpg" alt="" class="pic">
+            <div class="info">
+                <p class="supply-line"></p>
+                <h2>玟瑰保湿精华水</h2>
+                <p class="price-line">
+                    <span class="price">¥30</span>
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="mod-pro-pannel">
+        <a href="#" class="a-block cfix">
+            <img src="http://52.74.102.5/icons/product/meiguixilie/meiguibaoshiluhuijiao.jpg" alt="" class="pic">
+            <div class="info">
+                <p class="supply-line"></p>
+                <h2>玟瑰保湿芦荟胶</h2>
+                <p class="price-line">
+                    <span class="price">¥25</span>
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="mod-pro-pannel">
+        <a href="#" class="a-block cfix">
+            <img src="http://52.74.102.5/icons/product/meiguixilie/meiguibaoshishentiru.jpg" alt="" class="pic">
+            <div class="info">
+                <p class="supply-line"></p>
+                <h2>玟瑰保湿身体乳</h2>
+                <p class="price-line">
+                    <span class="price">¥25</span>
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="mod-pro-pannel">
+        <a href="#" class="a-block cfix">
+            <img src="http://52.74.102.5/icons/product/meiguixilie/meiguijinzhiyanshuang.jpg" alt="" class="pic">
+            <div class="info">
+                <p class="supply-line"></p>
+                <h2>玟瑰紧致眼霜</h2>
+                <p class="price-line">
+                    <span class="price">¥55</span>
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="mod-pro-pannel">
+        <a href="#" class="a-block cfix">
+            <img src="http://52.74.102.5/icons/product/meiguixilie/zhiyangrunfuru.jpg" alt="" class="pic">
+            <div class="info">
+                <p class="supply-line"></p>
+                <h2>止痒润肤乳</h2>
+                <p class="price-line">
+                    <span class="price">¥25</span>
+                </p>
+            </div>
+        </a>
+    </div>
+</div>
+#widget("widget/contact/contact.vm")
+
+                            </div>
+    <script type="text/javascript" src="/static/js/require.js"></script><script type="text/javascript" src="/static/components/swiper/swiper.js"></script><script type="text/javascript" src="/static/widget/slider/slider.js"></script><script type="text/javascript">;require(['widget/slider/slider'], function(app) {
+    app({
+        container : '.swiper-container',
+        pagination : '.swiper-pagination'
+    });
+});
+</script></body>
+        </html>

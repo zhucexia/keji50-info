@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>    <head>        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <title>上海女人</title>
+        <link rel="shortcut icon" type="image/x-icon" href="/static/img/favicon.ico" />
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+            <link rel="stylesheet" type="text/css" href="/static/scss/reset.css"/><link rel="stylesheet" type="text/css" href="/static/components/swiper/swiper.css"/><link rel="stylesheet" type="text/css" href="/static/widget/slider/slider.css"/><link rel="stylesheet" type="text/css" href="/static/widget/category/category.css"/><link rel="stylesheet" type="text/css" href="/static/widget/listpanel/listpanel.css"/><link rel="stylesheet" type="text/css" href="/static/page/list/list.css"/></head>
+    <body>        <div id="wrapper">
+                            
+        
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><a href="#"><img src="/static/img/index/banner/banner1.jpg"/></a></div>
+        <div class="swiper-slide"><a href="#"><img src="/static/img/index/banner/banner1.jpg"/></a></div>
+        <div class="swiper-slide"><a href="#"><img src="/static/img/index/banner/banner1.jpg"/></a></div>
+        <div class="swiper-slide"><a href="#"><img src="/static/img/index/banner/banner1.jpg"/></a></div>
+        <div class="swiper-slide"><a href="#"><img src="/static/img/index/banner/banner1.jpg"/></a></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+
+<div id="indexNavNew">
+    <!-- <div><a href="/beauty/products/">所有分类</a></div> -->
+    <ul class="categoryList">
+        <li>
+            <a href="/products/caizhuangxilie">彩妆系列<span class="prod_count"></span></a>
+        </li>
+        <li>
+            <a href="/products/gongdenghufu">宫灯护肤<span class="prod_count"></span></a>
+        </li>
+        <li>
+            <a href="/products/hufuxilie">护肤系列<span class="prod_count"></span></a>
+        </li>
+        <li>
+            <a href="/products/hushoushuang">护手霜<span class="prod_count"></span></a>
+        </li>
+        <li>
+            <a href="/products/jingyou">精油<span class="prod_count"></span></a>
+        </li>
+        <li>
+            <a href="/products/lihe">礼盒<span class="prod_count"></span></a>
+        </li>
+        <li>
+            <a href="/products/meiguixilie">玫瑰系列<span class="prod_count"></span></a>
+        </li>
+        <li>
+            <a href="/products/pianzaihuang">片仔癀<span class="prod_count"></span></a>
+        </li>
+        <li>
+            <a href="/products/xuehuagaoxilie">雪花膏系列<span class="prod_count"></span></a>
+        </li>
+            </ul>
+</div>
+<div id="list">
+	    <div class="mod-pro-pannel">
+        <a href="#" class="a-block cfix">
+            <img src="http://52.74.102.5/icons/product/gongdenghufu/gongdengbushuipenwu.jpg" alt="" class="pic">
+            <div class="info">
+                <p class="supply-line"></p>
+                <h2>宫灯补水喷雾</h2>
+                <p class="price-line">
+                    <span class="price">¥20</span>
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="mod-pro-pannel">
+        <a href="#" class="a-block cfix">
+            <img src="http://52.74.102.5/icons/product/gongdenghufu/gongdenghongjingtianbbshuang.jpg" alt="" class="pic">
+            <div class="info">
+                <p class="supply-line"></p>
+                <h2>宫灯红景天BB霜</h2>
+                <p class="price-line">
+                    <span class="price">¥30</span>
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="mod-pro-pannel">
+        <a href="#" class="a-block cfix">
+            <img src="http://52.74.102.5/icons/product/gongdenghufu/gongdenghongjingtianmeibaishuang.jpg" alt="" class="pic">
+            <div class="info">
+                <p class="supply-line"></p>
+                <h2>宫灯红景天美白霜</h2>
+                <p class="price-line">
+                    <span class="price">¥30</span>
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="mod-pro-pannel">
+        <a href="#" class="a-block cfix">
+            <img src="http://52.74.102.5/icons/product/gongdenghufu/gongdenghongjingtianmeijiru.jpg" alt="" class="pic">
+            <div class="info">
+                <p class="supply-line"></p>
+                <h2>宫灯红景天美肌乳</h2>
+                <p class="price-line">
+                    <span class="price">¥30</span>
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="mod-pro-pannel">
+        <a href="#" class="a-block cfix">
+            <img src="http://52.74.102.5/icons/product/gongdenghufu/gongdenghongjingtianmeijishui.jpg" alt="" class="pic">
+            <div class="info">
+                <p class="supply-line"></p>
+                <h2>宫灯红景天美肌水</h2>
+                <p class="price-line">
+                    <span class="price">¥30</span>
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="mod-pro-pannel">
+        <a href="#" class="a-block cfix">
+            <img src="http://52.74.102.5/icons/product/gongdenghufu/gongdenghongjingtianmeijiye.jpg" alt="" class="pic">
+            <div class="info">
+                <p class="supply-line"></p>
+                <h2>宫灯红景天美肌液</h2>
+                <p class="price-line">
+                    <span class="price">¥30</span>
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="mod-pro-pannel">
+        <a href="#" class="a-block cfix">
+            <img src="http://52.74.102.5/icons/product/gongdenghufu/gongdenghongjingtianmianmo.jpg" alt="" class="pic">
+            <div class="info">
+                <p class="supply-line"></p>
+                <h2>宫灯红景天面膜</h2>
+                <p class="price-line">
+                    <span class="price">¥30</span>
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="mod-pro-pannel">
+        <a href="#" class="a-block cfix">
+            <img src="http://52.74.102.5/icons/product/gongdenghufu/gongdengxingrenbushuimianmo.jpg" alt="" class="pic">
+            <div class="info">
+                <p class="supply-line"></p>
+                <h2>宫灯杏仁补水面膜（免洗）</h2>
+                <p class="price-line">
+                    <span class="price">¥25</span>
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="mod-pro-pannel">
+        <a href="#" class="a-block cfix">
+            <img src="http://52.74.102.5/icons/product/gongdenghufu/gongdengxingrenmi.jpg" alt="" class="pic">
+            <div class="info">
+                <p class="supply-line"></p>
+                <h2>宫灯杏仁蜜</h2>
+                <p class="price-line">
+                    <span class="price">¥25</span>
+                </p>
+            </div>
+        </a>
+    </div>
+</div>
+#widget("widget/contact/contact.vm")
+
+                            </div>
+    <script type="text/javascript" src="/static/js/require.js"></script><script type="text/javascript" src="/static/components/swiper/swiper.js"></script><script type="text/javascript" src="/static/widget/slider/slider.js"></script><script type="text/javascript">;require(['widget/slider/slider'], function(app) {
+    app({
+        container : '.swiper-container',
+        pagination : '.swiper-pagination'
+    });
+});
+</script></body>
+        </html>

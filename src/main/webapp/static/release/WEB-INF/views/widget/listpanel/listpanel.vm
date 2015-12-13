@@ -1,0 +1,19 @@
+#require("widget/listpanel/listpanel.css")
+#if($aListPanel)
+#foreach( $panel in $!{aListPanel} )
+    <div class="mod-pro-pannel">
+        <a href="#" class="a-block cfix">
+            <img src="$!{panel.sPicUrl}" alt="" class="pic">
+            <div class="info">
+                <p class="supply-line"></p>
+                <h2>$!{panel.sDesc}</h2>
+                <p class="price-line">
+                    <span class="price">¥$!{panel.iPrice}</span>
+                    <del>国内价：¥$!{panel.iOriginPrice}</del>
+                </p>
+                <p class="p-point"><ins>$!{panel.sIntro}</ins></p>
+            </div>
+        </a>
+    </div>
+#end
+#end

@@ -54,7 +54,7 @@ public class InfoController {
         // 首页动态栏推荐文章
         model.addAttribute(Constants.RESPONSE_INFOS_SUGGEST, infoService.getSuggestInfos());
 
-        return "index";
+        return "page/index/index";
     }
 
     @RequestMapping(value = "/p/{id}", method = RequestMethod.GET)

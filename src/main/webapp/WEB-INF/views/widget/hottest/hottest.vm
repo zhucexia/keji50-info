@@ -1,9 +1,12 @@
 <div class="top-articles" data-stat-module="Zuoceremen">
     <h3>热门文章</h3>
     <div async="true" async-callback="$(window).trigger(&#39;resize&#39;);" async-url="/asynces/posts/hots" id="hot_posts_position" style="display: block;">
-        <article>
-            <a class="pic before-fade-in after-fade-in" data-stat-click="tupian.1.5040830.click" href="http://36kr.com/p/5040830.html?ref=hot_posts" style="background-image: url(http://c.36krcnd.com/nil_class/2164b1ef-0c44-4e95-9f7a-98359845c064/68debe2291df83744647c3a227bbd222_meitu_1.jpg!square);"></a>
-            <div class="desc"><a class="title" data-stat-click="biaoti.1.5040830.click" href="http://36kr.com/p/5040830.html?ref=hot_posts" title="【首发】鸟哥笔记获2000万元A轮融资，用“干货分享+外包服务”帮创业公司解决市场推广的老大难问题">【首发】鸟哥笔记获2000万元A轮融资，用“干货分享+外包服务”帮创业公司解决市场推广的老大难问题</a></div>
+        #foreach ($infoHot in $infosHot)
+		<article>
+            <a class="pic before-fade-in after-fade-in" data-stat-click="tupian.1.${infoHot.id}.click" href="$rc.getContextPath()/p/$infoHot.id" style="background-image: url($infoHot.image!square);"></a>
+            <div class="desc"><a class="title" data-stat-click="biaoti.1.${infoHot.id}.click" href="$rc.getContextPath()/p/$infoHot.id" title="$infoHot.title">$infoHot.title</a></div>
         </article>
+        #end
+        
     </div>
 </div>

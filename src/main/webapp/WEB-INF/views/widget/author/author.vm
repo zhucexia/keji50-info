@@ -1,6 +1,6 @@
 <div id="article-latestArticles" style="display: block;">
-    <div class="author"><a href="$root/a/$info.author.id" target="_blank"><span class="avatar" style="background-image: url($info.author.image)"></span></a>
-        <div class="desc"><a href="$root/a/$info.author.id" target="_blank"><span class="name">$info.author.getNickname()</span></a><span class="badge">作者</span>
+    <div class="author"><a href="$rc.getContextPath()/a/$info.author.id" target="_blank"><span class="avatar" style="background-image: url($info.author.image)"></span></a>
+        <div class="desc"><a href="$rc.getContextPath()/a/$info.author.id" target="_blank"><span class="name">$info.author.getNickname()</span></a><span class="badge">作者</span>
             <div class="brief">科技50 资深编辑</div>
         </div>
         <div class="article-number-infor">
@@ -12,11 +12,11 @@
         <h3>最新文章 <i></i></h3>
         #foreach ($infoNearby in $infosNearby)
             <article>
-                <a class="pic" href="$root/p/$infoNearby.id" style="background-image: url($infoNearby.image)" target="_blank"></a>
-                <div class="desc"><a class="title" href="$root/p/$infoNearby.id" target="_blank">$infoNearby.title</a></div>
+                <a class="pic" href="$rc.getContextPath()/p/$infoNearby.id" style="background-image: url($infoNearby.image)" target="_blank"></a>
+                <div class="desc"><a class="title" href="$rc.getContextPath()/p/$infoNearby.id" target="_blank">$infoNearby.title</a></div>
             </article>
         #end
         
-        <div class="more-article"><a href="$root/a/$info.author.id" target="_blank">更多 &gt;</a></div>
+        <div class="more-article"><a href="$rc.getContextPath()/a/$info.author.id" target="_blank">更多 &gt;</a></div>
     </div>
 </div>

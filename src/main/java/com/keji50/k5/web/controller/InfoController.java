@@ -79,7 +79,7 @@ public class InfoController {
         // 热门文章
         model.addAttribute(Constants.RESPONSE_INFOS_HOT, infoService.getHotInfos());
 
-        return "detail";
+        return "page/detail/detail";
     }
 
     @RequestMapping(value = "/a/{id}", method = RequestMethod.GET)

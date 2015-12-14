@@ -62,7 +62,8 @@ public class InfoController {
         model.addAttribute(Constants.RESPONSE_INFOS_HOT, infoService.getHotInfos());
         // 首页动态栏推荐文章
         model.addAttribute(Constants.RESPONSE_INFOS_SUGGEST, infoService.getSuggestInfos());
-
+        // 资讯站主页标题
+        model.addAttribute(Constants.RESPONSE_TITLE, "资讯首页_科技50");
         return "page/index/index";
     }
 
@@ -87,7 +88,8 @@ public class InfoController {
         model.addAttribute(Constants.RESPONSE_INFOS_NEARBY, infosNearby.getResult());
         // 热门文章
         model.addAttribute(Constants.RESPONSE_INFOS_HOT, infoService.getHotInfos());
-
+        // 资讯详情页标题
+        model.addAttribute(Constants.RESPONSE_TITLE, info.getTitle() + "_科技50");
         return "page/detail/detail";
     }
 
@@ -118,11 +120,12 @@ public class InfoController {
         }
         // 热门文章列表
         model.addAttribute(Constants.RESPONSE_INFOS_HOT, infoService.getHotInfos());
-
+        // 作者详情页标题
+        model.addAttribute(Constants.RESPONSE_TITLE, author.getNickname() + "的文章_科技50");
         return "author";
     }
 
-    @RequestMapping(value = "/ajax/p", method = RequestMethod.GET)
+    @RequestMapping(value = "/p", method = RequestMethod.GET)
     @ResponseBody
     public JSONObject ajaxInfos(HttpServletRequest request) {
         try {
@@ -134,7 +137,7 @@ public class InfoController {
 
     }
 
-    @RequestMapping(value = "/ajax/category/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/category/{id}", method = RequestMethod.GET)
     @ResponseBody
     public JSONObject ajaxInfosByCategory(@PathVariable("id") int infocategoryId, HttpServletRequest request) {
         if (infocategoryId <= 0) {
@@ -149,7 +152,7 @@ public class InfoController {
         }
     }
 
-    @RequestMapping(value = "/ajax/author/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/author/{id}", method = RequestMethod.GET)
     @ResponseBody
     public JSONObject ajaxInfosByAuthor(@PathVariable("id") int authorId, HttpServletRequest request) {
         if (authorId <= 0) {

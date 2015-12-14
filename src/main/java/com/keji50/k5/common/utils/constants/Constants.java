@@ -36,6 +36,9 @@ public class Constants {
     
     // 以下为返回给页面的参数
 
+    // 页面标题
+    public final static String RESPONSE_TITLE = "title";
+    
     // 文章
     public final static String RESPONSE_INFO = "info";
     

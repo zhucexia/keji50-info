@@ -25,8 +25,7 @@ public class InfoCommentController {
 
 	@RequestMapping(value = "/ajax/{id}", method = RequestMethod.GET)
 	@ResponseBody
-	public JSONObject ajaxCommentsByInfo(@PathVariable("id") int infoId,
-			HttpServletRequest request) {
+	public JSONObject ajaxCommentsByInfo(@PathVariable("id") int infoId, HttpServletRequest request) {
 		if (infoId <= 0) {
 			return WebUtils.toResponse(Collections.emptyList());
 		}

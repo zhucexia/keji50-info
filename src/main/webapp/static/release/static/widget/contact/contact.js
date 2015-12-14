@@ -1,1 +1,0 @@
-define("widget/contact/contact",["require", "exports", "module", "components/jquery/jquery"],function(o, e, c){{var n=o("components/jquery/jquery");c.exports=function(o){console.log(n.fn),n(o.dom).click(function(){n("#mask").css("height",document.body.scrollHeight).show()}),n("#mask").click(function(){n(this).hide()})}}});

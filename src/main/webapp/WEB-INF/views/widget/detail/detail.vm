@@ -16,7 +16,7 @@
                 <section class="single-post-tags">
                     <span class="tag-tip">标签：</span>
                         #foreach ($tag in $info.getTags())
-                            <span class="tag-item"><a href="$rc.getContextPath()/tag/$tag" target="_blank">$tag</a>
+                            <span class="tag-item"><a href="$rc.getContextPath()/tag/$tag" target="_blank">$tag</a></span>
                         #end
                     </span>
                 </section>

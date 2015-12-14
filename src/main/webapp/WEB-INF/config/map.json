@@ -150,10 +150,7 @@
         },
         "release/static/components/jquery/jquery.js": {
             "uri": "/static/release/static/components/jquery/jquery.js",
-            "type": "js",
-            "extras": {
-                "moduleId": "components/jquery/jquery"
-            }
+            "type": "js"
         },
         "release/static/components/mask/mask.css": {
             "uri": "/static/release/static/components/mask/mask.css",
@@ -162,14 +159,7 @@
         "release/static/components/mask/mask.js": {
             "uri": "/static/release/static/components/mask/mask.js",
             "type": "js",
-            "extras": {
-                "paths": {
-                    "components/zepto/zepto": "release/static/components/zepto/zepto.js"
-                },
-                "moduleId": "components/mask/mask"
-            },
             "deps": [
-                "release/static/components/zepto/zepto.js",
                 "release/static/components/mask/mask.css"
             ]
         },
@@ -180,19 +170,13 @@
         "release/static/components/swiper/swiper.js": {
             "uri": "/static/release/static/components/swiper/swiper.js",
             "type": "js",
-            "extras": {
-                "moduleId": "components/swiper/swiper"
-            },
             "deps": [
                 "release/static/components/swiper/swiper.css"
             ]
         },
         "release/static/components/zepto/zepto.js": {
             "uri": "/static/release/static/components/zepto/zepto.js",
-            "type": "js",
-            "extras": {
-                "moduleId": "components/zepto/zepto"
-            }
+            "type": "js"
         },
         "release/static/js/require.js": {
             "uri": "/static/release/static/js/require.js",
@@ -208,10 +192,7 @@
         },
         "release/static/pkg/boot.js": {
             "uri": "/static/release/static/pkg/boot.js",
-            "type": "js",
-            "extras": {
-                "moduleId": "components/jquery/jquery"
-            }
+            "type": "js"
         },
         "release/static/scss/reset.css": {
             "uri": "/static/release/static/scss/reset.css",
@@ -228,14 +209,7 @@
         "release/static/widget/contact/contact.js": {
             "uri": "/static/release/static/widget/contact/contact.js",
             "type": "js",
-            "extras": {
-                "paths": {
-                    "components/jquery/jquery": "release/static/pkg/boot.js"
-                },
-                "moduleId": "widget/contact/contact"
-            },
             "deps": [
-                "release/static/pkg/boot.js",
                 "release/static/widget/contact/contact.css"
             ]
         },
@@ -254,14 +228,7 @@
         "release/static/widget/slider/slider.js": {
             "uri": "/static/release/static/widget/slider/slider.js",
             "type": "js",
-            "extras": {
-                "paths": {
-                    "components/swiper/swiper": "release/static/components/swiper/swiper.js"
-                },
-                "moduleId": "widget/slider/slider"
-            },
             "deps": [
-                "release/static/components/swiper/swiper.js",
                 "release/static/widget/slider/slider.css"
             ]
         },

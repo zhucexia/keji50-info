@@ -3,7 +3,7 @@
     <div async="true" async-callback="$(window).trigger(&#39;resize&#39;);" async-url="/asynces/posts/hots" id="hot_posts_position" style="display: block;">
         #foreach ($infoHot in $infosHot)
 		<article>
-            <a class="pic before-fade-in after-fade-in" data-stat-click="tupian.1.${infoHot.id}.click" href="$rc.getContextPath()/p/$infoHot.id" style="background-image: url($infoHot.image!square);"></a>
+            <a class="pic before-fade-in after-fade-in" data-stat-click="tupian.1.${infoHot.id}.click" href="$rc.getContextPath()/p/$infoHot.id" style="background-image: url($infoHot.image);"></a>
             <div class="desc"><a class="title" data-stat-click="biaoti.1.${infoHot.id}.click" href="$rc.getContextPath()/p/$infoHot.id" title="$infoHot.title">$infoHot.title</a></div>
         </article>
         #end

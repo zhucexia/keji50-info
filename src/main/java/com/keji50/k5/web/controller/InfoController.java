@@ -1,5 +1,7 @@
 package com.keji50.k5.web.controller;
 
+import org.apache.commons.collections.CollectionUtils;
+
 import com.alibaba.fastjson.JSONObject;
 import com.github.pagehelper.Page;
 import com.keji50.k5.common.utils.WebUtils;
@@ -47,8 +49,15 @@ public class InfoController {
     public String index(Model model) {
         // 文章目录
         model.addAttribute(Constants.RESPONSE_INFO_CATEGORIES, infoCategoryService.getInfoCatetories());
+
+        List<InfoPo> infos = infoService.getInfos(0, Command.NEXT);
         // 首页文章
-        model.addAttribute(Constants.RESPONSE_INFOS, infoService.getInfos(0, Command.NEXT));
+        model.addAttribute(Constants.RESPONSE_INFOS, infos);
+        // 最后一篇文章的id
+        if (CollectionUtils.isNotEmpty(infos)) {
+            model.addAttribute(Constants.INFO_OFFSET, infos.get(infos.size() - 1).getId());
+        }
+
         // 热门文章
         model.addAttribute(Constants.RESPONSE_INFOS_HOT, infoService.getHotInfos());
         // 首页动态栏推荐文章
@@ -103,13 +112,17 @@ public class InfoController {
         model.addAttribute(Constants.RESPONSE_INFOS_TOTAL, infos.getTotal());
         // 作者文章列表
         model.addAttribute(Constants.RESPONSE_INFOS, infos.getResult());
+        // 最后一篇文章的偏移量
+        if (CollectionUtils.isNotEmpty(infos)) {
+            model.addAttribute(Constants.INFO_OFFSET, infos.get(infos.size() - 1).getId());
+        }
         // 热门文章列表
         model.addAttribute(Constants.RESPONSE_INFOS_HOT, infoService.getHotInfos());
 
         return "author";
     }
 
-    @RequestMapping(value = "/p", method = RequestMethod.GET)
+    @RequestMapping(value = "/ajax/p", method = RequestMethod.GET)
     @ResponseBody
     public JSONObject ajaxInfos(HttpServletRequest request) {
         try {
@@ -121,7 +134,7 @@ public class InfoController {
 
     }
 
-    @RequestMapping(value = "/category/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/ajax/category/{id}", method = RequestMethod.GET)
     @ResponseBody
     public JSONObject ajaxInfosByCategory(@PathVariable("id") int infocategoryId, HttpServletRequest request) {
         if (infocategoryId <= 0) {
@@ -136,7 +149,7 @@ public class InfoController {
         }
     }
 
-    @RequestMapping(value = "/author/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/ajax/author/{id}", method = RequestMethod.GET)
     @ResponseBody
     public JSONObject ajaxInfosByAuthor(@PathVariable("id") int authorId, HttpServletRequest request) {
         if (authorId <= 0) {

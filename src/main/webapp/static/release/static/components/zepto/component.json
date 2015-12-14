@@ -1,6 +1,0 @@
-{
-    "repos": "https://github.com/madrobby/zepto.git",
-    "version": "1.1.6",
-    "name": "zepto",
-    "main": "zepto.js"
-}

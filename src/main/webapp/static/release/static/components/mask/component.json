@@ -1,6 +1,0 @@
-{
-    "repos": "https://github.com/swiper/swiper.git",
-    "version": "1.9.1",
-    "name": "mask",
-    "main": "mask.js"
-}

@@ -18,7 +18,7 @@
                     <a class="title info_flow_news_title" data-stat-click="wenzhangbiaoti.1.${info.id}.click" href="$rc.getContextPath()/p/$info.id" target="_blank">$info.title</a>
                     <div class="author">
                     <a href="$rc.getContextPath()/a/$info.author.id">
-                        <span class="avatar before-fade-in" data-stat-click="wenzhangzuozhe.1.${info.id}.click"></span>
+                        <span class="avatar before-fade-in" data-stat-click="wenzhangzuozhe.1.${info.id}.click" style="background-image: url($info.author.image);"></span>
                         <span class="name">$info.author.getNickname()</span></a>
                         <span class="time">&nbsp;•&nbsp;<time class="timeago" title="$info.getCreateDate()" datetime="$info.getCreateDate()">$info.getCreateDate()</time></span>
                     </div>

@@ -6,7 +6,7 @@
   padding: 9px 10px;
 }
 #indexNavNew a{
-  background: url(/static/img/list/arrow-right.png) no-repeat right center;
+  background: url(/info/static/img/list/arrow-right.png) no-repeat right center;
   background-size: 8px 12px;
   color: #333;
   font-size: 14px;

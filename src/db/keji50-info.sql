@@ -40,3 +40,21 @@ CREATE TABLE `info` (
   KEY `info_info_category_id` (`info_category_id`),
   KEY `info_author_id` (`author_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='资讯信息表';
+
+-- ----------------------------
+-- 资讯评论表
+-- ----------------------------
+DROP TABLE IF EXISTS `info_comment`;
+CREATE TABLE `info_comment` (
+  `id` int(11) unsigned auto_increment NOT NULL COMMENT '主键ID',
+  `author_id` int(11) NOT NULL COMMENT '评论人ID',
+  `to_author` varchar(60)  COMMENT '被评论人昵称',
+  `info_id` int(11) NOT NULL COMMENT '资讯ID',
+  `content` varchar(400) NOT NULL COMMENT '评论内容',
+  `create_date` datetime NOT NULL COMMENT '创建时间',
+  `state` varchar(1) COLLATE utf8_bin DEFAULT 'c' COMMENT '数据状态   c:草稿 s;已审核 d:删除',
+  PRIMARY KEY (`id`),
+  KEY `info_comment_id` (`id`),
+  KEY `info_comment_info_id` (`info_id`),
+  KEY `info_comment_author_id` (`author_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='资讯评论表';

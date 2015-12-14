@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.keji50.k5.dao.mapper.InfoCommentPoMapper">
+
+	<resultMap id="AccountResultMap" type="com.keji50.k5.dao.po.AccountPo">
+		<id column="author_id" property="id" jdbcType="DECIMAL" />
+		<result column="username" property="username" jdbcType="VARCHAR" />
+		<result column="email" property="email" jdbcType="VARCHAR" />
+		<result column="nickname" property="nickname" jdbcType="VARCHAR" />
+		<result column="author_image" property="image" jdbcType="VARCHAR" />
+	</resultMap>
+	
+	<resultMap id="InfoCommentResultMap" type="com.keji50.k5.dao.po.InfoCommentPo">
+		<id property="id" column="id" jdbcType="DECIMAL" />
+		<result property="infoId" column="info_id" jdbcType="VARCHAR" />
+		<result property="toAuthor" column="to_author" jdbcType="VARCHAR" />
+		<result property="content" column="content" jdbcType="VARCHAR" />
+		<result property="createDate" column="create_date" jdbcType="TIMESTAMP" />
+		<result property="state" column="state" jdbcType="VARCHAR" />
+		<association property="author" column="author_id" resultMap="AccountResultMap" />
+	</resultMap>
+	<sql id="Info_Comment_Column_List">
+		a.id,  a.author_id, a.content, a.toAuthor, a.state, a.create_date
+	</sql>
+	<sql id="Account_Column_List">
+		b.username, b.email, b.nickname, b.image as account_image
+	</sql>
+
+	<select id="selectByInfo" resultMap="InfoCommentResultMap">
+		select <include refid="Info_Comment_Column_List" />, <include refid="Account_Column_List" /> from info_comment a
+		left join account b on a.author_id = b.id
+		where a.state = 's' and a.info_id = #{infoId, jdbcType=DECIMAL}
+		<if test="authorId != null and authorId > 0">
+			or (a.author_id = #{authorId, jdbcType=DECIMAL} and a.state = 'c')
+		</if>
+		order by id desc
+	</select>
+	
+</mapper>

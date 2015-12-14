@@ -105,6 +105,6 @@ public class InfoPo {
     }
 
     public String getCreateDate() {
-        return createDate == null ? "" : new SimpleDateFormat("yyyyMMdd HH:mm:ss").format(createDate);
+        return createDate == null ? "" : new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(createDate);
     }
 }

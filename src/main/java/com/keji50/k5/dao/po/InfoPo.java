@@ -1,16 +1,3 @@
-/**
- * InfoPo.java
- * com.keji50.k5.dao.po
- *
- * Function： TODO 
- *
- *   ver     date      		author
- * ──────────────────────────────────
- *   		 2015年12月9日 		chao.li
- *
- * Copyright (c) 2015, Howbuy Rights Reserved.
- */
-
 package com.keji50.k5.dao.po;
 
 import java.text.SimpleDateFormat;

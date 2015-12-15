@@ -39,6 +39,21 @@
     vertical-align: top;
     overflow: hidden;
 }
+.article-side .author .article-number-infor:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+}
+.article-side .latest-articles .more-article a {
+    color: #319fee;
+}
+.article-side .latest-articles .more-article {
+    display: block;
+    padding: 10px 0;
+    text-align: right;
+    font-size: 14px;
+}
 .article-side .author .desc {
     overflow: hidden;
     display: inline-block;

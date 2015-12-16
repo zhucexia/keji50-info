@@ -122,7 +122,7 @@ public class InfoController {
         model.addAttribute(Constants.RESPONSE_INFOS_HOT, infoService.getHotInfos());
         // 作者详情页标题
         model.addAttribute(Constants.RESPONSE_TITLE, author.getNickname() + "的文章_科技50");
-        return "author";
+        return "page/author/author";
     }
 
     @RequestMapping(value = "/p", method = RequestMethod.GET)

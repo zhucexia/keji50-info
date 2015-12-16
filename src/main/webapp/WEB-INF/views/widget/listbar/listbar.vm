@@ -1,0 +1,6 @@
+<div class="categories J_newsListNavBar">
+    <a class="active tab" data-stat-click="fenleiall.click" data-type="all" href="$rc.getContextPath()" id="column_header_all">全部</a>
+    #foreach ($category in $categories)
+    <a class=" tab" data-stat-click="fenlei${category.code}.click" data-type="{category.code}" href="$rc.getContextPath()/category/$category.id" id="column_header_${category.code}">$category.name</a>
+    #end
+</div>

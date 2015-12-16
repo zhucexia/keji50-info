@@ -1,0 +1,6 @@
+{
+    "repos": "https://github.com/template/template.git",
+    "version": "1.9.1",
+    "name": "template",
+    "main": "template.js"
+}

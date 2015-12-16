@@ -2754,13 +2754,6 @@ html {
 body {
     min-height: 100%;
     position: relative;
-    padding-bottom: 226px
-}
-
-@media (max-width: 800px) {
-    body {
-        padding-bottom: 222px
-    }
 }
 
 .fixed-tools {

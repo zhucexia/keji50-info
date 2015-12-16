@@ -15,11 +15,48 @@
             "uri": "/info/static/components/mask/mask.js",
             "type": "js",
             "extras": {
+                "paths": {
+                    "components/jquery/jquery": "components/jquery/jquery.js"
+                },
                 "moduleId": "components/mask/mask"
             },
             "deps": [
-                "zepto",
+                "components/jquery/jquery.js",
                 "components/mask/mask.css"
+            ]
+        },
+        "components/tabs/tabs.js": {
+            "uri": "/info/static/components/tabs/tabs.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "components/jquery/jquery": "components/jquery/jquery.js"
+                },
+                "moduleId": "components/tabs/tabs"
+            },
+            "deps": [
+                "components/jquery/jquery.js"
+            ]
+        },
+        "components/template/template.js": {
+            "uri": "/info/static/components/template/template.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "components/template/template"
+            }
+        },
+        "page/author/author.css": {
+            "uri": "/info/static/page/author/author.css",
+            "type": "css"
+        },
+        "page/author/author.vm": {
+            "uri": "/page/author/author.vm",
+            "type": "vm",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "page/author/author.css"
             ]
         },
         "page/detail/detail.css": {
@@ -64,90 +101,6 @@
                 "isPage": true
             }
         },
-        "release/static/components/jquery/jquery.js": {
-            "uri": "/info/static/release/static/components/jquery/jquery.js",
-            "type": "js"
-        },
-        "release/static/components/mask/mask.css": {
-            "uri": "/info/static/release/static/components/mask/mask.css",
-            "type": "css"
-        },
-        "release/static/components/mask/mask.js": {
-            "uri": "/info/static/release/static/components/mask/mask.js",
-            "type": "js",
-            "deps": [
-                "release/static/components/mask/mask.css"
-            ]
-        },
-        "release/static/components/swiper/swiper.css": {
-            "uri": "/info/static/release/static/components/swiper/swiper.css",
-            "type": "css"
-        },
-        "release/static/components/swiper/swiper.js": {
-            "uri": "/info/static/release/static/components/swiper/swiper.js",
-            "type": "js",
-            "deps": [
-                "release/static/components/swiper/swiper.css"
-            ]
-        },
-        "release/static/components/zepto/zepto.js": {
-            "uri": "/info/static/release/static/components/zepto/zepto.js",
-            "type": "js"
-        },
-        "release/static/js/require.js": {
-            "uri": "/info/static/release/static/js/require.js",
-            "type": "js"
-        },
-        "release/static/page/index/index.css": {
-            "uri": "/info/static/release/static/page/index/index.css",
-            "type": "css"
-        },
-        "release/static/page/list/list.css": {
-            "uri": "/info/static/release/static/page/list/list.css",
-            "type": "css"
-        },
-        "release/static/pkg/boot.js": {
-            "uri": "/info/static/release/static/pkg/boot.js",
-            "type": "js"
-        },
-        "release/static/scss/reset.css": {
-            "uri": "/info/static/release/static/scss/reset.css",
-            "type": "css"
-        },
-        "release/static/widget/category/category.css": {
-            "uri": "/info/static/release/static/widget/category/category.css",
-            "type": "css"
-        },
-        "release/static/widget/contact/contact.css": {
-            "uri": "/info/static/release/static/widget/contact/contact.css",
-            "type": "css"
-        },
-        "release/static/widget/contact/contact.js": {
-            "uri": "/info/static/release/static/widget/contact/contact.js",
-            "type": "js",
-            "deps": [
-                "release/static/widget/contact/contact.css"
-            ]
-        },
-        "release/static/widget/label/label.css": {
-            "uri": "/info/static/release/static/widget/label/label.css",
-            "type": "css"
-        },
-        "release/static/widget/listpanel/listpanel.css": {
-            "uri": "/info/static/release/static/widget/listpanel/listpanel.css",
-            "type": "css"
-        },
-        "release/static/widget/slider/slider.css": {
-            "uri": "/info/static/release/static/widget/slider/slider.css",
-            "type": "css"
-        },
-        "release/static/widget/slider/slider.js": {
-            "uri": "/info/static/release/static/widget/slider/slider.js",
-            "type": "js",
-            "deps": [
-                "release/static/widget/slider/slider.css"
-            ]
-        },
         "static/js/require.js": {
             "uri": "/info/static/js/require.js",
             "type": "js"
@@ -178,17 +131,6 @@
                 "widget/author/author.css"
             ]
         },
-        "widget/category/category.css": {
-            "uri": "/info/static/widget/category/category.css",
-            "type": "css"
-        },
-        "widget/category/category.vm": {
-            "uri": "/widget/category/category.vm",
-            "type": "vm",
-            "deps": [
-                "widget/category/category.css"
-            ]
-        },
         "widget/detail/detail.css": {
             "uri": "/info/static/widget/detail/detail.css",
             "type": "css"
@@ -200,13 +142,38 @@
                 "widget/detail/detail.css"
             ]
         },
+        "widget/footer/footer.css": {
+            "uri": "/info/static/widget/footer/footer.css",
+            "type": "css"
+        },
         "widget/footer/footer.vm": {
             "uri": "/widget/footer/footer.vm",
-            "type": "vm"
+            "type": "vm",
+            "deps": [
+                "widget/footer/footer.css"
+            ]
+        },
+        "widget/header/header.css": {
+            "uri": "/info/static/widget/header/header.css",
+            "type": "css"
+        },
+        "widget/header/header.js": {
+            "uri": "/info/static/widget/header/header.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "widget/header/header"
+            },
+            "deps": [
+                "widget/header/header.css"
+            ]
         },
         "widget/header/header.vm": {
             "uri": "/widget/header/header.vm",
-            "type": "vm"
+            "type": "vm",
+            "deps": [
+                "widget/header/header.js",
+                "widget/header/header.css"
+            ]
         },
         "widget/hottest/hottest.css": {
             "uri": "/info/static/widget/hottest/hottest.css",
@@ -221,6 +188,10 @@
         },
         "widget/lightbox/lightbox.vm": {
             "uri": "/widget/lightbox/lightbox.vm",
+            "type": "vm"
+        },
+        "widget/listbar/listbar.vm": {
+            "uri": "/widget/listbar/listbar.vm",
             "type": "vm"
         },
         "widget/newslist/newslist.vm": {

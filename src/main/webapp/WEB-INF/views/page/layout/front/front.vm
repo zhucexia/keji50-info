@@ -3,11 +3,13 @@
 
     #block("body")
         #block("header")
+			#widget("widget/header/header.vm")
         #end
 
-        #block("content")#end
+        #block("content") #end
 
         #block("footer")
+			#widget("widget/footer/footer.vm")
         #end
     #end
 

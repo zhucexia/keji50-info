@@ -1,0 +1,103 @@
+/* 开始页面样式 */
+
+.top {
+    height: 50px;
+    background: linear-gradient(left, rgb(52, 177, 75), rgb(42, 179, 80) 4%, rgb(38, 179, 85) 10%, rgb(20, 175, 101) 18%, rgb(6, 177, 121) 26%, rgb(2, 174, 144) 38%, rgb(1, 171, 181) 53%, rgb(0, 169, 205) 68%, rgb(3, 166, 225) 78%, rgb(1, 165, 234) 89%, rgb(3, 164, 236) 97%);
+    background: -o-linear-gradient(left, rgb(52, 177, 75), rgb(42, 179, 80) 4%, rgb(38, 179, 85) 10%, rgb(20, 175, 101) 18%, rgb(6, 177, 121) 26%, rgb(2, 174, 144) 38%, rgb(1, 171, 181) 53%, rgb(0, 169, 205) 68%, rgb(3, 166, 225) 78%, rgb(1, 165, 234) 89%, rgb(3, 164, 236) 97%);
+    background: -ms-linear-gradient(left, rgb(52, 177, 75), rgb(42, 179, 80) 4%, rgb(38, 179, 85) 10%, rgb(20, 175, 101) 18%, rgb(6, 177, 121) 26%, rgb(2, 174, 144) 38%, rgb(1, 171, 181) 53%, rgb(0, 169, 205) 68%, rgb(3, 166, 225) 78%, rgb(1, 165, 234) 89%, rgb(3, 164, 236) 97%);
+    background: -moz-linear-gradient(left, rgb(52, 177, 75), rgb(42, 179, 80) 4%, rgb(38, 179, 85) 10%, rgb(20, 175, 101) 18%, rgb(6, 177, 121) 26%, rgb(2, 174, 144) 38%, rgb(1, 171, 181) 53%, rgb(0, 169, 205) 68%, rgb(3, 166, 225) 78%, rgb(1, 165, 234) 89%, rgb(3, 164, 236) 97%);
+    background: -webkit-linear-gradient(left, rgb(52, 177, 75), rgb(42, 179, 80) 4%, rgb(38, 179, 85) 10%, rgb(20, 175, 101) 18%, rgb(6, 177, 121) 26%, rgb(2, 174, 144) 38%, rgb(1, 171, 181) 53%, rgb(0, 169, 205) 68%, rgb(3, 166, 225) 78%, rgb(1, 165, 234) 89%, rgb(3, 164, 236) 97%);
+    position: relative;
+    z-index: 1000;
+}
+
+.topBox {
+    width: 960px;
+    margin: auto;
+    height: 50px;
+}
+
+.top .topLink_1,
+.top .topLink_2 {
+    float: left;
+    height: 50px;
+}
+
+.top .bsShareCode {
+    float: right;
+}
+
+.topLink_1 a {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    margin: 0px 5px 0px 0px;
+    padding: 0px 10px;
+    float: left;
+    font-size: 14px;
+    text-decoration: none;
+    color: #ccc;
+}
+
+.topBox a:hover {
+    text-decoration: none;
+}
+
+.topBox .selected {
+    background: black;
+    text-decoration: none;
+}
+
+.topLink_1 a img {
+    margin: 0px 0px 0px 5px;
+    vertical-align: middle;
+}
+
+.topLink_1 a.logo {
+    margin-top: -3px;
+    padding: 0px;
+}
+
+.topLink_1 a.logo img {
+    margin: 0px;
+}
+
+.rss {
+    float: right;
+    background: url(../images/u34_normal.png);
+    height: 30px;
+    margin-top: 9px;
+    width: 80px;
+}
+
+.topLink_2 a {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0px 7px;
+    float: left;
+    font-size: 14px;
+    color: #CCC;
+}
+
+.topLink_2 b {
+    display: block;
+    float: left;
+    width: 1px;
+    height: 12px;
+    border-left: solid 1px #334;
+    background: #565;
+    border-right: solid 1px #433;
+    margin: 20px 7px 0px 7px;
+}
+
+.bsShareCode {
+    height: 20px;
+    margin: 17px 0px 0px 0px;
+}
+
+.top .topLink_1 a:hover,
+.top .topLink_2 a:hover {
+    text-decoration: none;
+    color: #CF4;
+}

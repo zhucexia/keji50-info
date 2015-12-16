@@ -1,0 +1,6 @@
+{
+    "repos": "https://github.com/tabs/tabs.git",
+    "version": "1.9.1",
+    "name": "tabs",
+    "main": "tabs.js"
+}

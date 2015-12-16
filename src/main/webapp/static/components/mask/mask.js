@@ -1,5 +1,5 @@
-define('components/mask/mask', ['require', 'exports', 'module', 'zepto'],function(require, exports, module) {
-var $ = require('zepto'), doc = document, body = doc.body;
+define('components/mask/mask', ['require', 'exports', 'module', 'components/jquery/jquery'],function(require, exports, module) {
+var $ = require('components/jquery/jquery'), doc = document, body = doc.body;
 
 function Mask(opt){
 	this.options = $.extend({

@@ -1,4 +1,46 @@
-<div class="container footer">
-    <hr/>
-    <p>&copy; Company 2014</p>
+<div class="bottomCon clear" >
+	<table>
+		<tr>
+			<td>
+				<b>关于我们</b>
+				<i>科技50是一个面向中国所有初创公司、新产品的数据库和点评平台。网站定位于记录国内所有领域公司、产品的成长及发展历程，用户可以注册登陆后查看项目介绍、所在地区、联系方式等，为喜欢的项目进行评论，搭建一个创业者与投资人互动交流的平台。</i>
+				<b>新闻资讯</b>
+				<i>通过与各个公司相关的新闻查看并跟踪网站的最新动态、发展历程等。</i>
+			</td>
+			<th></th><th class="line"></th>
+			<td>
+				<b>发布项目</b>
+				<i>如果您是一位创业者，在这里可以免费发布创业信息，使您的项目能够更快更效率的吸引到众多的投资者们，让您马上创业有钱！</i>
+				<b>线下活动</b>
+				<i>科技50是中国最具影响力的投融资交流平台，为项目发起者提供募资、投资、孵化、运营一站式综合服务，强大的支持资金联盟真正为企业服务，定期举办创业大赛、投融资对接会等活动。</i>
+			</td>
+			<th></th><th class="line"></th>
+			<td>
+				<b>浏览项目</b>
+				<i>如果您是一位投资者，在这里可以浏览到各个领域最全最新的创业项目，看好项目，就看科技50！</i>
+				<b>联系方式</b>
+				<i>
+					官方微博：科技50创业大赛
+					<br />官方微信：nanxiang50
+					<br />报名咨询：蒋智华
+					<br />电话：13901830676
+					<br />邮箱：448778546@qq.com
+				</i>
+			</td>
+		</tr>
+	</table>
+</div>
+<div class="bottom">
+	<div class="bottomBox">
+		<span>
+			<a href="$keji50_domain/web?command=Index">首页</a>
+			<a href="$keji50_domain/web?command=ListPro">项目</a>
+			<a href="$keji50_domain/web?command=ListNews">活动</a>
+			<a href="$keji50_domain/web?command=ListTutor">导师</a>
+			<a href="$keji50_domain/web?command=ListMade">创富集</a>
+			<a href="http://weibo.com/u/2934813712" target="_blank">官方微博</a>
+		</span>
+		<i> &copy;2014 领头羊信息科技有限公司 版权所有 <a href="http://www.miitbeian.gov.cn/" target="_blank">沪ICP备14008120号-1</a></i>
+		<em><img src="images/code.png"/></em>
+	</div>
 </div>

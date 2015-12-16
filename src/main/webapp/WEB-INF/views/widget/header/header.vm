@@ -1,35 +1,59 @@
-#if ($menus)
+#set($keji50_domain = "http://www.keji50.com")
+<div class="top ss">
+    <div class="topBox">
+        <div class="topLink_1">
+            <a class="logo" href="#"><img src="/images/logo.png"/></a>
+            <a href="$keji50_domain/web?command=Index">首页</a>
+            <a href="/info">资讯</a>
+            <a href="$keji50_domain/web?command=ListPro">项目</a>
+            <a href="$keji50_domain/web?command=ListNews">活动</a>
+            <a href="$keji50_domain/web?command=ListTutor">导师</a>
+            <a href="$keji50_domain/web?command=ListMade">创富集</a>
+        </div>
+        
+        <div class="topLink_2">
+            <a href="$keji50_domain/web?command=MadeHelp">创业帮助</a>
+            <b></b>
+            <a href="$keji50_domain/web?command=Apply">报名</a>
+        #* 
+<c:if test="${sessionScope.login}">    
+            <span><a href="#"><c:out value="${sessionScope.account.nickname}"/></a></span>     
+            <span><a href="<c:url value="/web?command=Logout"/>">退出</a></span>     
+        </c:if>    *#
 
-    ## velocity 宏示例
-    #macro( renderMenus $menus $child)
-        #if( $child )
-        <ul class="dropdown-menu" role="menu">
-        #else
-        <ul class="nav navbar-nav" role="menu">
-        #end
-
-        #foreach( $menu in $menus )
-            #if( $menu.children )
-            <li class="dropdown #if( $menu.active )active#end">
-                <a href="$!{request.contextPath}$!{menu.href}" class="dropdown-toggle" data-toggle="dropdown" href="#">$!{menu.label} <span class="caret"></span></a>
-
-                #renderMenus($menu.children true)
-            </li>
-            #else
-            <li #if( $menu.active )class="active"#end>
-                <a href="$!{request.contextPath}$!{menu.href}">$!{menu.label}</a>
-            </li>
-            #end
-        #end
-
-        </ul>
-    #end
-
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <a class="navbar-brand #if( $currentUrl == '/' )active#end" href="/">Jello Demo</a>
-            #renderMenus($menus)
+            <a href="$keji50_domain/web?command=Login">登录</a>
+            <a href="$keji50_domain/web?command=Register">注册</a>
+    
+            <a href="$keji50_domain/web?command=Release_pro" style="margin-left:100px;">发布项目</a>
+        </div>
+        <div class="subscribe" style=" margin-left:auto; margin-right:auto">
+            <span class="tip">
+             <img height="30" onclick="openTip();" src="/images/subscribe.png"> 
+                 <span id="tipc" class="tip-content"> 
+                     <img onclick="closeTip();" class="right" src="/images/close.png"> <br>
+                     <img src="/images/sub.jpg">
+                 </span> 
+            </span> 
         </div>
     </div>
-#end
+</div>
+<script>
+    $(function() {
+        $('.tip').miniTip({
+            'event' : 'click',
+            'delay'             : '10000',
+            'contentType'       : 'selector',
+            'contentSelector'   : '.tip-content',
+            'position'          : 'left',
+            'className'         : 'white'});
+        });
+        function closeTip(){
+          $('.minitip-content').hide();
+          $('.minitip-arrow').hide();
+        }
+        function openTip(){
+          $('.minitip-content').show();
+          $('.minitip-arrow').show();
+        }
+    });
+</script> 

@@ -5,7 +5,10 @@
 <div class="index-wrap">
 	#widget("widget/lightbox/lightbox.vm")
   	<div class="main-section">
-    	#widget("widget/newslist/newslist.vm")
+		<div class="news-list J_articleListWrap" data-stat-module="Zhufeed">
+    		#widget("widget/listbar/listbar.vm")
+    		#widget("widget/newslist/newslist.vm")
+		</div>
     	<div class="index-side">
     		#widget("widget/hottest/hottest.vm")
     		#widget("widget/advertise/advertise.vm")

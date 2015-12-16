@@ -1,0 +1,28 @@
+#extends("page/layout/front/front.vm")
+#require("page/index/index.css")
+#require("page/author/author.css")
+#block("content")
+
+<div class="index-wrap">
+  	<div class="main-section search-result-wrap">
+  		<div class="result-list">
+  			<div class="result-info">
+  				<div class="keyword">
+  					<em class="highlight">$author.getNickname()</em>的所有文章
+  				</div>
+  				<div class="count">结果数：<em class="highlight">$infosTotal</em></div>
+  			</div>
+    		#widget("widget/newslist/newslist.vm")
+    	</div>
+    	<div class="index-side">
+    		#widget("widget/hottest/hottest.vm")
+    		#widget("widget/advertise/advertise.vm")
+    	</div>	
+  	</div>
+</div>
+
+#end## end of body
+
+## 需要依赖一下自己，否则该 vm 中依赖没法自动加载进来。
+#require("./index.vm")
+#end

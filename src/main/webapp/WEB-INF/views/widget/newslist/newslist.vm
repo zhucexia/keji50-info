@@ -1,33 +1,25 @@
-<div class="news-list J_articleListWrap" data-stat-module="Zhufeed">
-    <div class="categories J_newsListNavBar">
-        <a class="active tab" data-stat-click="fenleiall.click" data-type="all" href="$rc.getContextPath()" id="column_header_all">全部</a>
-        #foreach ($category in $categories)
-        <a class=" tab" data-stat-click="fenlei${category.code}.click" data-type="{category.code}" href="$rc.getContextPath()/category/$category.id" id="column_header_${category.code}">$category.name</a>
-        #end
-    </div>
-    <div class="article-list">
-        <div class="articles J_articleList">
-            <div class="J_channelIndexAd list-head-ad">
-            </div>
-            #foreach ($info in $infos)
-            <article>
-                <a class="pic info_flow_news_image badge-o2o before-fade-in after-fade-in" data-fit-mobile="true" data-stat-click="wenzhangtupian.1.${info.id}.click" href="$rc.getContextPath()/p/$info.id" style="background-image: url($info.image);">
-                    <span class="mask-tags" data-type="$info.infoCategory.code">$info.infoCategory.name</span>
-                </a>
-                <div class="desc">
-                    <a class="title info_flow_news_title" data-stat-click="wenzhangbiaoti.1.${info.id}.click" href="$rc.getContextPath()/p/$info.id" target="_blank">$info.title</a>
-                    <div class="author">
-                    <a href="$rc.getContextPath()/a/$info.author.id">
-                        <span class="avatar before-fade-in" data-stat-click="wenzhangzuozhe.1.${info.id}.click" style="background-image: url($info.author.image);"></span>
-                        <span class="name">$info.author.getNickname()</span></a>
-                        <span class="time">&nbsp;•&nbsp;<time class="timeago" title="$info.getCreateDate()" datetime="$info.getCreateDate()">$info.getCreateDate()</time></span>
-                    </div>
-                    <div class="brief">$info.shortDesc</div>
-                </div>
-            </article>
-            #end
-
-            <a class="load-more J_listLoadMore" data-stat-click="wenzhanggengduo.click" href="$rc.getContextPath()?d=next&offset=$offset" id="info_flows_next_link"></a>
+<div class="article-list">
+    <div class="articles J_articleList">
+        <div class="J_channelIndexAd list-head-ad">
         </div>
+        #foreach ($info in $infos)
+        <article>
+            <a class="pic info_flow_news_image badge-o2o before-fade-in after-fade-in" data-fit-mobile="true" data-stat-click="wenzhangtupian.1.${info.id}.click" href="$rc.getContextPath()/p/$info.id" style="background-image: url($info.image);">
+                <span class="mask-tags" data-type="$info.infoCategory.code" style="background-color: $info.infoCategory.colorCode">$info.infoCategory.name</span>
+            </a>
+            <div class="desc">
+                <a class="title info_flow_news_title" data-stat-click="wenzhangbiaoti.1.${info.id}.click" href="$rc.getContextPath()/p/$info.id" target="_blank">$info.title</a>
+                <div class="author">
+                <a href="$rc.getContextPath()/a/$info.author.id">
+                    <span class="avatar before-fade-in" data-stat-click="wenzhangzuozhe.1.${info.id}.click" style="background-image: url($info.author.image);"></span>
+                    <span class="name">$info.author.getNickname()</span></a>
+                    <span class="time">&nbsp;•&nbsp;<time class="timeago" title="$info.getCreateDate()" datetime="$info.getCreateDate()">$info.getCreateDate()</time></span>
+                </div>
+                <div class="brief">$info.shortDesc</div>
+            </div>
+        </article>
+        #end
+
+        <a class="load-more J_listLoadMore" data-stat-click="wenzhanggengduo.click" href="$rc.getContextPath()?d=next&offset=$offset" id="info_flows_next_link"></a>
     </div>
 </div>

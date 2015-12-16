@@ -292,7 +292,9 @@ a:hover {
         display: block
     }
 }
-
+.index-wrap{
+    padding-bottom: 20px;
+}
 @media (max-width: 800px) {
     .index-wrap {
         padding: 10px

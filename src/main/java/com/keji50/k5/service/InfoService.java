@@ -43,14 +43,10 @@ public class InfoService {
     @Getter
     private volatile List<InfoPo> hotInfos;
 
-    /**
-     * 获取系统推荐文章列表
-     * 
-     * @return
-     */
-    public List<InfoPo> getSuggestInfos() {
-        return infoPoMapper.selectSuggests();
-    }
+    // 首页广告栏文章
+    @Setter
+    @Getter
+    private volatile List<InfoPo> suggestInfos;
 
     /**
      * 分页条件查询文章列表信息

@@ -1,19 +1,59 @@
+#if ($infosSuggest)
 <div class="head-images J_headImages">
-    <div class="scrollers badge-column">
-        <a data-stat-click="dingbu.top.click" href="http://36kr.com/p/5040778.html?ref=head_line_top" id="headline_top" target="_blank" class="before-fade-in after-fade-in" style="background-image: url(http://e.36krcnd.com/nil_class/d2f9e1f4-c865-4f19-9f32-ccbcc777026e/1110438892.jpg!slider);"><img alt="【WISE 2.0】【重磅发布】中国一级市场公司估值排名500强" src="./36kr_files/1110438892.jpg!slider"><span class="mask-tags" data-type="column">专栏</span><span>【WISE 2.0】【重磅发布】中国一级市场公司估值排名500强</span></a>
+	#set($infoSuggest = $infosSuggest.get(0))
+    <div class="scrollers">
+        <a data-stat-click="dingbu.top.click" href="$rc.getContextPath()/p/$infoSuggest.id" id="headline_top" target="_blank" class="before-fade-in after-fade-in" style="background-image: url($infoSuggest.image);"><img alt="$infoSuggest.title" src="$infoSuggest.image"><span class="mask-tags" data-type="$infoSuggest.infoCategory.code" style="background-color: $infoSuggest.infoCategory.colorCode">$infoSuggest.infoCategory.name</span><span>$infoSuggest.title</span></a>
     </div>
     <div class="smaller-images">
-        <div class="block wider article badge-fun"><a data-stat-click="dingbu.1.click" href="http://36kr.com/p/5040832.html?ref=head_line_one" id="headline_one" target="_blank" class="before-fade-in after-fade-in" style="background-image: url(http://c.36krcnd.com/nil_class/72481e4e-bf73-44aa-9c5d-cfb71a9646e7/___.jpg!slider);"><span class="mask-tags" data-type="fun">Fun!!</span><span>【WISE 2.0】左志坚说做了十年内容仍困惑变现，“奇葩说”的马东摇了摇头</span></a></div>
-        <div class="block article badge-column"><a data-stat-click="dingbu.2.click" href="http://36kr.com/p/5040828.html?ref=head_line_two" id="headline_two" target="_blank" class="before-fade-in after-fade-in" style="background-image: url(http://d.36krcnd.com/nil_class/1cb25298-0627-4386-86c5-57e723b0dbfd/webwxgetmsgimg__1_.jpeg!feature);"><span class="mask-tags" data-type="column">专栏</span><span>【WISE 2.0】易到周航：牌桌上四个玩家，专车行业格局远未尘埃落定</span></a></div>
-        <div class="block next ad" id="headline_three">
-            <a href="http://www.baidu.com/cb.php?c=IgF_pyfqnHRdnjDkPWR0IZ0qnfK9ujYznHn3PH610Aw-5HczrHfdrHm0TAq15HDknj03nHb0T1YLmWuhmyNhujP9nHFhP1K-0AwY5HDYPjbdrj0vPW00IgF_5y9YIZK1rBtEThq8uz31PhVzQhPEUiqlpAq8uvPCULNfIyk_HhNL5LPEIgFWuHdbULNhIyVdmyb0Thfqn6KBUHYs0ZKz5H00Iy-b5HRvP1TdP1D0Uv-b5HDvnWc4n6KWpyfqPjcdn1mk0AqLUWYkPHRdrjb0TZbqnW0v0APzm1Y1n1c4P0" style="background-image:url(http://ubmcmm.baidustatic.com/media/v1/0f000aJOWzY8sZJktXV686.jpg)" target="_blank"></a>
+    	#if($infosSuggest.size() > 1)
+    		#set($infoSuggest = $infosSuggest.get(1))
+    	#end
+        <div class="block wider article">
+        	<a data-stat-click="dingbu.1.click" href="$rc.getContextPath()/p/$infoSuggest.id" id="headline_one" target="_blank" class="before-fade-in after-fade-in" style="background-image: url($infoSuggest.image);">
+        		<span class="mask-tags" data-type="$infoSuggest.infoCategory.code" style="background-color: $infoSuggest.infoCategory.colorCode">$infoSuggest.infoCategory.name</span>
+        		<span>$infoSuggest.title</span>
+        	</a>
         </div>
-        <div class="block article badge-finance"><a data-stat-click="dingbu.4.click" href="http://36kr.com/p/5040829.html?ref=head_line_four" id="headline_four" target="_blank" class="before-fade-in after-fade-in" style="background-image: url(http://b.36krcnd.com/nil_class/d5728204-b892-4501-bd4c-c3f89831de02/__.jpg!feature);"><span class="mask-tags" data-type="finance">互联网金融</span><span>【WISE 2.0】投资人李丰论述：近期的未来为什么是人民币基金的好机遇？</span></a></div>
-        <div id="headline_five">
-            <div class="block ad">
-                <a href="http://www.baidu.com/cb.php?c=IgF_pyfqnHRdnj6vn1m0IZ0qnfK9ujYznHn3njDk0Aw-5HczrHfsn1T0TAq15HDsrHD1nW60T1YLPhczPjfYuW-WryRzuAPW0AwY5HDYPjbdrj0vPWD0IgF_5y9YIZK1rBtEUA78UA-Wmyb8mvqVQLK_my4BQv7sTAqGUMwVuy4Y5LKWUvw-5HnvpLFBIgwYUv3hpAd1TWY1PhVzFh9VUyfqmLKWFh9VTAsqn1uoThFdIZwEUhk9UhkGmv7GFh9VpLTqmMNYIAq8Fh9VmvbqmMNYIAq80ZFb5Hc0mhYqn0KsTWYs0ZNGujYdPWTLPHTk0AqGujYkPWczrHc0mv-b5HfzPHnvnfKEIv3qnHRdPH640ZK45HcsP6KWThnqnH0vPjm" class="before-fade-in after-fade-in" style="background-image: url(http://ubmcmm.baidustatic.com/media/v1/0f000rbML7TCUCuVxbNBAf.jpg);" target="_blank">
-                </a>
-            </div>
+        
+        #if($infosSuggest.size() > 2)
+        	#set($infoSuggest = $infosSuggest.get(2))
+        #end
+        <div class="block article">
+        	<a data-stat-click="dingbu.2.click" href="$rc.getContextPath()/p/$infoSuggest.id" id="headline_two" target="_blank" class="before-fade-in after-fade-in" style="background-image: url($infoSuggest.image);">
+        		<span class="mask-tags" data-type="$infoSuggest.infoCategory.code" style="background-color: $infoSuggest.infoCategory.colorCode">$infoSuggest.infoCategory.name</span>
+        		<span>$infoSuggest.title</span>
+        	</a>
+        </div>
+        
+        #if($infosSuggest.size() > 3)
+        	#set($infoSuggest = $infosSuggest.get(3))
+        #end
+        <div class="block article">
+            <a data-stat-click="dingbu.3.click" href="$rc.getContextPath()/p/$infoSuggest.id" id="headline_three" target="_blank" class="before-fade-in after-fade-in" style="background-image:url($infoSuggest.image)">
+            	<span class="mask-tags" data-type="$infoSuggest.infoCategory.code" style="background-color: $infoSuggest.infoCategory.colorCode">$infoSuggest.infoCategory.name</span>
+        		<span>$infoSuggest.title</span>
+            </a>
+        </div>
+        
+        #if($infosSuggest.size() > 4)
+        	#set($infoSuggest = $infosSuggest.get(4))
+        #end
+        <div class="block article">
+        	<a data-stat-click="dingbu.4.click" href="$rc.getContextPath()/p/$infoSuggest.id" id="headline_four" target="_blank" class="before-fade-in after-fade-in" style="background-image: url($infoSuggest.image);">
+        		<span class="mask-tags" data-type="$infoSuggest.infoCategory.code" style="background-color: $infoSuggest.infoCategory.colorCode">$infoSuggest.infoCategory.name</span>
+        		<span>$infoSuggest.title</span>
+        	</a>
+        </div>
+        
+        #if($infosSuggest.size() > 5)
+        	#set($infoSuggest = $infosSuggest.get(5))
+        #end
+        <div class="block article">
+            <a data-stat-click="dingbu.5.click" href="$rc.getContextPath()/p/$infoSuggest.id" id="headline_five" target="_blank" class="before-fade-in after-fade-in" style="background-image: url($infoSuggest.image);">
+        		<span class="mask-tags" data-type="$infoSuggest.infoCategory.code" style="background-color: $infoSuggest.infoCategory.colorCode">$infoSuggest.infoCategory.name</span>
+        		<span>$infoSuggest.title</span>
+        	</a>
         </div>
     </div>
 </div>
+#end

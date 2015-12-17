@@ -61,7 +61,10 @@ public class InfoController {
         // 热门文章
         model.addAttribute(Constants.RESPONSE_INFOS_HOT, infoService.getHotInfos());
         // 首页动态栏推荐文章
-        model.addAttribute(Constants.RESPONSE_INFOS_SUGGEST, infoService.getSuggestInfos());
+        List<InfoPo> suggestInfos = infoService.getSuggestInfos();
+        if (CollectionUtils.isNotEmpty(suggestInfos)) {
+            model.addAttribute(Constants.RESPONSE_INFOS_SUGGEST, suggestInfos);
+        }
         // 资讯站主页标题
         model.addAttribute(Constants.RESPONSE_TITLE, "资讯首页_科技50");
         return "page/index/index";

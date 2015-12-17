@@ -3,6 +3,9 @@
 #require("page/author/author.css")
 #block("content")
 
+#set($pageUrl = '$rc.getContextPath()/author/$author.id')
+#set($pageFlag = 'author')
+
 <div class="index-wrap">
   	<div class="main-section search-result-wrap">
   		<div class="result-list">

@@ -1,6 +1,9 @@
 #extends("page/layout/front/front.vm")
 
 #block("content")
+#set($pageUrl = '$rc.getContextPath()/p')
+#set($pageCateUrl = '$rc.getContextPath()/category/')
+#set($pageFlag = 'index')
 
 <div class="index-wrap">
 	#widget("widget/lightbox/lightbox.vm")

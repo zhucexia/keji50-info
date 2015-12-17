@@ -194,9 +194,30 @@
             "uri": "/widget/listbar/listbar.vm",
             "type": "vm"
         },
+        "widget/newslist/newslist.js": {
+            "uri": "/info/static/widget/newslist/newslist.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "components/jquery/jquery": "components/jquery/jquery.js"
+                },
+                "moduleId": "widget/newslist/newslist"
+            },
+            "deps": [
+                "components/jquery/jquery.js"
+            ]
+        },
         "widget/newslist/newslist.vm": {
             "uri": "/widget/newslist/newslist.vm",
-            "type": "vm"
+            "type": "vm",
+            "extras": {
+                "paths": {
+                    "widget/newslist/newslist": "widget/newslist/newslist.js"
+                }
+            },
+            "deps": [
+                "widget/newslist/newslist.js"
+            ]
         }
     },
     "pkg": {}

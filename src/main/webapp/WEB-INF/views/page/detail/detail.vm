@@ -1,7 +1,6 @@
 #extends("page/layout/front/front.vm")
 #require("page/detail/detail.css")
 #block("content")
-#widget("widget/header/header.vm")
 <div class="article-detail-wrap">
         <div class="main-section">
 			#widget("widget/detail/detail.vm")
@@ -12,7 +11,6 @@
             </div>
         </div>
     </div>
-
 #end## end of body
 
 ## 需要依赖一下自己，否则该 vm 中依赖没法自动加载进来。

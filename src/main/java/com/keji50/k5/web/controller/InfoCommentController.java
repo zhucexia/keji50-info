@@ -40,6 +40,7 @@ public class InfoCommentController {
 			List<InfoCommentPo> comments = infoCommentService.getCommentsByInfo(infoId, authorId);
 			return WebUtils.toResponse(comments);
 		} catch (Exception e) {
+		    e.printStackTrace();
 			return WebUtils.toFailedResponse();
 		}
 	}

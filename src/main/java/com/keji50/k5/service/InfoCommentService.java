@@ -1,14 +1,15 @@
 package com.keji50.k5.service;
 
-import java.util.Collections;
-import java.util.List;
-
-import javax.annotation.Resource;
-
-import org.springframework.stereotype.Service;
+import com.keji50.k5.common.utils.constants.Constants;
 
 import com.keji50.k5.dao.mapper.InfoCommentPoMapper;
 import com.keji50.k5.dao.po.InfoCommentPo;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import javax.annotation.Resource;
+import org.springframework.stereotype.Service;
 
 /**
  * 文章评论业务service
@@ -30,7 +31,10 @@ public class InfoCommentService {
 		if (infoId <= 0) {
 			return Collections.emptyList();
 		}
+		Map<String, Object> condition = new HashMap<String, Object>();
+		condition.put(Constants.INFO_ID, infoId);
+		condition.put(Constants.AUTHOR_ID, authorId);
 
-		return infoCommentPoMapper.selectByInfo(infoId, authorId);
+		return infoCommentPoMapper.selectByCondition(condition);
 	}
 }

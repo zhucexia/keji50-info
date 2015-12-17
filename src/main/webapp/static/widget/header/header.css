@@ -10,23 +10,32 @@
     position: relative;
     z-index: 1000;
 }
-
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
 .topBox {
-    width: 960px;
+    width: 1170px;
     margin: auto;
     height: 50px;
 }
-
+.logo img{
+	width: 112px;
+}
 .top .topLink_1,
 .top .topLink_2 {
     float: left;
     height: 50px;
 }
-
+.top .topLink_2 ,
 .top .bsShareCode {
     float: right;
 }
-
+.top .topLink_2{
+	margin-right: 140px;
+}
 .topLink_1 a {
     display: block;
     height: 50px;
@@ -36,7 +45,7 @@
     float: left;
     font-size: 14px;
     text-decoration: none;
-    color: #ccc;
+    color: #bfeae0;
 }
 
 .topBox a:hover {
@@ -54,8 +63,8 @@
 }
 
 .topLink_1 a.logo {
-    margin-top: -3px;
     padding: 0px;
+    margin-right: 30px;
 }
 
 .topLink_1 a.logo img {
@@ -77,7 +86,7 @@
     padding: 0px 7px;
     float: left;
     font-size: 14px;
-    color: #CCC;
+    color: #bfeae0;
 }
 
 .topLink_2 b {

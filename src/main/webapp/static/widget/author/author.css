@@ -94,9 +94,8 @@ section .article-side .author .article-number-infor .read-number {
 }
 .article-side .author .article-number-infor>div {
     display: block;
-    float: left;
     width: 40%;
-    margin: 0 5%;
+    margin: 0 auto;
     text-align: center;
     border-radius: 2px;
     border: 1px solid #f3f3f3;

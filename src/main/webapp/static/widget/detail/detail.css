@@ -827,7 +827,8 @@ section.single-post-comment .bottom {
     margin-top: 15px;
     *zoom: 1;
     padding-bottom: 20px;
-    border-bottom: solid 1px #f4f4f4
+    border-bottom: solid 1px #f4f4f4;
+    background-color: #fff;
 }
 
 section.single-post-comment .bottom:after {

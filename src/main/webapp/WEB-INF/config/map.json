@@ -199,12 +199,14 @@
             "type": "js",
             "extras": {
                 "paths": {
-                    "components/jquery/jquery": "components/jquery/jquery.js"
+                    "components/jquery/jquery": "components/jquery/jquery.js",
+                    "components/template/template": "components/template/template.js"
                 },
                 "moduleId": "widget/newslist/newslist"
             },
             "deps": [
-                "components/jquery/jquery.js"
+                "components/jquery/jquery.js",
+                "components/template/template.js"
             ]
         },
         "widget/newslist/newslist.vm": {

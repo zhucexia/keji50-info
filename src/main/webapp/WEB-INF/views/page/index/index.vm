@@ -1,8 +1,8 @@
 #extends("page/layout/front/front.vm")
 
 #block("content")
-#set($pageUrl = '$rc.getContextPath()/p')
-#set($pageCateUrl = '$rc.getContextPath()/category/')
+#set($pageUrl = "$rc.getContextPath()/p")
+#set($pageCateUrl = "$rc.getContextPath()/category/")
 #set($pageFlag = 'index')
 
 <div class="index-wrap">

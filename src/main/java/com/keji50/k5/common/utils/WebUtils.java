@@ -1,5 +1,7 @@
 package com.keji50.k5.common.utils;
 
+import javax.servlet.http.HttpServletRequest;
+
 import com.alibaba.fastjson.JSONObject;
 import com.keji50.k5.common.utils.constants.ResponseCode;
 
@@ -20,6 +22,8 @@ public class WebUtils {
     private static final String KEY_CODE = "code";
 
     private static final String KEY_MESSAGE = "message";
+    
+    private static final String KEY_CONTEXT_PATH = "contextpath";
 
     private static JSONObject RESPONSE_FAILED;
     private static JSONObject RESPONSE_SUCCEED;
@@ -42,10 +46,10 @@ public class WebUtils {
         return RESPONSE_FAILED;
     }
 
-    public static JSONObject toResponse(Object data) {
+    public static JSONObject toResponse(Object data, HttpServletRequest request) {
         JSONObject succeed = (JSONObject) RESPONSE_SUCCEED.clone();
         succeed.put(KEY_DATA, data);
-
+        succeed.put(KEY_CONTEXT_PATH, request.getContextPath());
         return succeed;
     }
 }

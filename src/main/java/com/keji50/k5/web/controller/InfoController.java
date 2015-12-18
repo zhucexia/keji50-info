@@ -133,7 +133,7 @@ public class InfoController {
     public JSONObject ajaxInfos(HttpServletRequest request) {
         try {
             List<InfoPo> infos = infoService.getInfos(getInfoOffset(request), getCommand(request));
-            return WebUtils.toResponse(infos);
+            return WebUtils.toResponse(infos, request);
         } catch (Exception e) {
             return WebUtils.toFailedResponse();
         }
@@ -144,12 +144,12 @@ public class InfoController {
     @ResponseBody
     public JSONObject ajaxInfosByCategory(@PathVariable("id") int infocategoryId, HttpServletRequest request) {
         if (infocategoryId <= 0) {
-            return WebUtils.toResponse(Collections.emptyList());
+            return WebUtils.toResponse(Collections.emptyList(), request);
         }
 
         try {
             List<InfoPo> infos = infoService.getInfosByCategory(infocategoryId, getInfoOffset(request), getCommand(request));
-            return WebUtils.toResponse(infos);
+            return WebUtils.toResponse(infos, request);
         } catch (Exception e) {
             return WebUtils.toFailedResponse();
         }
@@ -159,11 +159,11 @@ public class InfoController {
     @ResponseBody
     public JSONObject ajaxInfosByAuthor(@PathVariable("id") int authorId, HttpServletRequest request) {
         if (authorId <= 0) {
-            return WebUtils.toResponse(Collections.emptyList());
+            return WebUtils.toResponse(Collections.emptyList(), request);
         }
         try {
             List<InfoPo> infos = infoService.getInfosByAuthor(authorId, getInfoOffset(request), getCommand(request));
-            return WebUtils.toResponse(infos);
+            return WebUtils.toResponse(infos, request);
         } catch (Exception e) {
             return WebUtils.toFailedResponse();
         }

@@ -3,7 +3,7 @@
 #require("page/author/author.css")
 #block("content")
 
-#set($pageUrl = '$rc.getContextPath()/author/$author.id')
+#set($pageUrl = "$rc.getContextPath()/author/$author.id")
 #set($pageFlag = 'author')
 
 <div class="index-wrap">

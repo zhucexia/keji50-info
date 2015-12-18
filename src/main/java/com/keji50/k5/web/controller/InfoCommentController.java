@@ -27,7 +27,7 @@ public class InfoCommentController {
 	@ResponseBody
 	public JSONObject ajaxCommentsByInfo(@PathVariable("id") int infoId, HttpServletRequest request) {
 		if (infoId <= 0) {
-			return WebUtils.toResponse(Collections.emptyList());
+			return WebUtils.toResponse(Collections.emptyList(), request);
 		}
 		int authorId = 0;
 		try {
@@ -38,7 +38,7 @@ public class InfoCommentController {
 
 		try {
 			List<InfoCommentPo> comments = infoCommentService.getCommentsByInfo(infoId, authorId);
-			return WebUtils.toResponse(comments);
+			return WebUtils.toResponse(comments, request);
 		} catch (Exception e) {
 		    e.printStackTrace();
 			return WebUtils.toFailedResponse();

@@ -1,6 +1,6 @@
 <div class="categories J_newsListNavBar">
     <a class="active tab firstList" data="" data-type="all" href="javascript:;" id="column_header_all">全部</a>
     #foreach ($category in $categories)
-    <a class=" tab" data="$category.id" href="javascript:;" id="column_header_${category.code}">$category.name</a>
+    <a class="tab" data="$category.id" href="javascript:;" id="column_header_${category.code}">$category.name</a>
     #end
 </div>

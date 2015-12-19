@@ -101,6 +101,13 @@
                 "isPage": true
             }
         },
+        "page/test/loginInfo.vm": {
+            "uri": "/page/test/loginInfo.vm",
+            "type": "vm",
+            "extras": {
+                "isPage": true
+            }
+        },
         "static/js/require.js": {
             "uri": "/info/static/js/require.js",
             "type": "js"

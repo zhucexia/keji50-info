@@ -23,6 +23,8 @@ public class Constants {
      */
     public final static String DEFAULT_ACCOUNT_IMAGE = CustomizedPropertyPlaceholderConfigurer.getContextProperty("account.default.image");
 
+    public final static String KEJI50_DOMAIN = CustomizedPropertyPlaceholderConfigurer.getContextProperty("keji50.domain");
+    
     public final static String INFO_CATEGORY_ID = "info_category_id";
     
     public final static String INFO_ID = "info_id";
@@ -35,6 +37,9 @@ public class Constants {
     
     
     // 以下为返回给页面的参数
+    
+    // 科技50 域名
+    public final static String RESPONSE_KEJI50_DOMAIN = "keji50_domain";
 
     // 页面标题
     public final static String RESPONSE_TITLE = "title";

@@ -1,7 +1,5 @@
 package com.keji50.k5.web.controller;
 
-import org.apache.commons.collections.CollectionUtils;
-
 import com.alibaba.fastjson.JSONObject;
 import com.github.pagehelper.Page;
 import com.keji50.k5.common.utils.WebUtils;
@@ -17,6 +15,7 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -67,6 +66,8 @@ public class InfoController {
         }
         // 资讯站主页标题
         model.addAttribute(Constants.RESPONSE_TITLE, "资讯首页_科技50");
+        // 科技50域名
+        model.addAttribute(Constants.RESPONSE_KEJI50_DOMAIN, Constants.KEJI50_DOMAIN);
         return "page/index/index";
     }
 
@@ -93,6 +94,8 @@ public class InfoController {
         model.addAttribute(Constants.RESPONSE_INFOS_HOT, infoService.getHotInfos());
         // 资讯详情页标题
         model.addAttribute(Constants.RESPONSE_TITLE, info.getTitle() + "_科技50");
+        // 科技50域名
+        model.addAttribute(Constants.RESPONSE_KEJI50_DOMAIN, Constants.KEJI50_DOMAIN);
         return "page/detail/detail";
     }
 
@@ -125,6 +128,8 @@ public class InfoController {
         model.addAttribute(Constants.RESPONSE_INFOS_HOT, infoService.getHotInfos());
         // 作者详情页标题
         model.addAttribute(Constants.RESPONSE_TITLE, author.getNickname() + "的文章_科技50");
+        // 科技50域名
+        model.addAttribute(Constants.RESPONSE_KEJI50_DOMAIN, Constants.KEJI50_DOMAIN);
         return "page/author/author";
     }
 

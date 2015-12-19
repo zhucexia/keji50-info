@@ -104,9 +104,10 @@
 	</select>
 	
 	<select id="selectHots" resultMap="InfoResultMap">
-		select id, title, image from info
-		where state = 's'
-		order by id desc limit 6
+		select i.id, i.title, i.image, count(c.id) as comment_count from info i
+		left join info_comment c on i.id = c.info_id
+		where i.state = 's'
+		group by i.id order by comment_count desc, id desc limit 6
 	</select>
 
 </mapper>

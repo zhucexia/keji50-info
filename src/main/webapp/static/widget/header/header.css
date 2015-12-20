@@ -19,10 +19,12 @@
 .topBox {
     width: 1170px;
     margin: auto;
-    height: 50px;
+    height: 60px;
 }
 .logo img{
-	width: 112px;
+	width: 130px;
+    vertical-align: middle;
+    margin-top: -3px;
 }
 .top .topLink_1,
 .top .topLink_2 {
@@ -33,21 +35,26 @@
 .top .bsShareCode {
     float: right;
 }
-.top .topLink_2{
-	margin-right: 140px;
-}
 .topLink_1 a {
     display: block;
     height: 50px;
     line-height: 50px;
     margin: 0px 5px 0px 0px;
-    padding: 0px 10px;
+    padding: 0px 12px;
     float: left;
-    font-size: 14px;
+    font-size: 15px;
     text-decoration: none;
-    color: #bfeae0;
+    color: #fff;
 }
-
+.topLink_2 a.ico-user ,.topLink_2 a.ico-edit{
+    padding-left: 25px;
+}
+.ico-user {
+    background: url('/info/static/widget/header/images/user.png') left center no-repeat;
+}
+.ico-edit {
+    background: url('/info/static/widget/header/images/edit.png') left center no-repeat;
+}
 .topBox a:hover {
     text-decoration: none;
 }
@@ -56,19 +63,9 @@
     background: black;
     text-decoration: none;
 }
-
-.topLink_1 a img {
-    margin: 0px 0px 0px 5px;
-    vertical-align: middle;
-}
-
 .topLink_1 a.logo {
     padding: 0px;
     margin-right: 30px;
-}
-
-.topLink_1 a.logo img {
-    margin: 0px;
 }
 
 .rss {
@@ -83,21 +80,13 @@
     display: block;
     height: 50px;
     line-height: 50px;
-    padding: 0px 7px;
+    margin: 0px 7px;
     float: left;
-    font-size: 14px;
-    color: #bfeae0;
+    font-size: 15px;
+    color: #fff;
 }
-
-.topLink_2 b {
-    display: block;
-    float: left;
-    width: 1px;
-    height: 12px;
-    border-left: solid 1px #334;
-    background: #565;
-    border-right: solid 1px #433;
-    margin: 20px 7px 0px 7px;
+.topLink_2 .J_unlogin ,.topLink_2 .J_logined{
+    display: inline;
 }
 
 .bsShareCode {

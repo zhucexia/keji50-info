@@ -2,7 +2,7 @@
     <div class="topBox">
         <div class="topLink_1">
             <a class="logo" href="#"><img src="/info/static/widget/header/images/logo.png"/></a>
-            <a href="/info">资讯</a>
+            <a href="$rc.getContextPath()">资讯</a>
             <a href="$keji50_domain/web?command=ListNews">创业活动</a>
             <a href="$keji50_domain/web?command=ListPro">项目展示</a>
             <a href="$keji50_domain/web?command=ListTutor">导师</a>
@@ -17,29 +17,15 @@
             <span><a href="#"><c:out value="${sessionScope.account.nickname}"/></a></span>     
             <span><a href="<c:url value="/web?command=Logout"/>">退出</a></span>     
         </c:if>    *#
-            <a href="$keji50_domain/web?command=Login">登录</a>
-            <a href="$keji50_domain/web?command=Register">注册</a>
-            <a href="$keji50_domain/web?command=Release_pro">发布项目</a>
+            <div class="J_unlogin">
+                <a href="$keji50_domain/web?command=Login" class="ico-user">登录</a>
+                <a href="$keji50_domain/web?command=Register">注册</a>
+            </div>
+            <div class="J_logined" style="display:none;">
+                <a href="javascript:;" class="loginUser ico-user"></a>  
+                <a href="$keji50_domain/web?command=Logout">退出</a> 
+            </div>
+            <a href="$keji50_domain/web?command=Release_pro" class="ico-edit">发布项目</a>
         </div>
     </div>
 </div>
-<script>
-    // $(function() {
-    //     $('.tip').miniTip({
-    //         'event' : 'click',
-    //         'delay'             : '10000',
-    //         'contentType'       : 'selector',
-    //         'contentSelector'   : '.tip-content',
-    //         'position'          : 'left',
-    //         'className'         : 'white'});
-    //     });
-    //     function closeTip(){
-    //       $('.minitip-content').hide();
-    //       $('.minitip-arrow').hide();
-    //     }
-    //     function openTip(){
-    //       $('.minitip-content').show();
-    //       $('.minitip-arrow').show();
-    //     }
-    // });
-</script> 

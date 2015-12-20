@@ -70,7 +70,7 @@ public class InfoCommentController {
 		comment.setToAuthor(toAuthor);
 		comment.setContent(content);
 		try {
-			if (infoCommentService.postComment(comment)) {
+			if (infoCommentService.saveComment(comment)) {
 				return WebUtils.toResponse(comment, request);
 			} else {
 				return WebUtils.toFailedResponse();

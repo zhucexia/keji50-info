@@ -142,10 +142,32 @@
             "uri": "/info/static/widget/detail/detail.css",
             "type": "css"
         },
+        "widget/detail/detail.js": {
+            "uri": "/info/static/widget/detail/detail.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "components/jquery/jquery": "components/jquery/jquery.js",
+                    "components/template/template": "components/template/template.js"
+                },
+                "moduleId": "widget/detail/detail"
+            },
+            "deps": [
+                "components/jquery/jquery.js",
+                "components/template/template.js",
+                "widget/detail/detail.css"
+            ]
+        },
         "widget/detail/detail.vm": {
             "uri": "/widget/detail/detail.vm",
             "type": "vm",
+            "extras": {
+                "paths": {
+                    "widget/detail/detail": "widget/detail/detail.js"
+                }
+            },
             "deps": [
+                "widget/detail/detail.js",
                 "widget/detail/detail.css"
             ]
         },
@@ -197,9 +219,30 @@
             "uri": "/widget/lightbox/lightbox.vm",
             "type": "vm"
         },
+        "widget/listbar/listbar.js": {
+            "uri": "/info/static/widget/listbar/listbar.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "components/jquery/jquery": "components/jquery/jquery.js"
+                },
+                "moduleId": "widget/listbar/listbar"
+            },
+            "deps": [
+                "components/jquery/jquery.js"
+            ]
+        },
         "widget/listbar/listbar.vm": {
             "uri": "/widget/listbar/listbar.vm",
-            "type": "vm"
+            "type": "vm",
+            "extras": {
+                "paths": {
+                    "widget/listbar/listbar": "widget/listbar/listbar.js"
+                }
+            },
+            "deps": [
+                "widget/listbar/listbar.js"
+            ]
         },
         "widget/newslist/newslist.js": {
             "uri": "/info/static/widget/newslist/newslist.js",

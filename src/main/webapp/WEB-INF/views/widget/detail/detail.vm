@@ -1,3 +1,5 @@
+#set($commentUrl = "$rc.getContextPath()/comment/get/$info.id")
+#set($postUrl = "$rc.getContextPath()/comment/post/$info.id")
 <div class="content-wrapper">
     <div class="article-section" data-aid="$info.id" data-url="$rc.getContextPath()/p/$info.id" id="article-section-$info.id">
         <div class="inner">
@@ -27,7 +29,39 @@
                         <li><a class="comment-btn J_addCommentBtn" data-post-id="5040832" data-stat-click="pinglunshuliang.click" href="javascript:void(0)"><i class="icon icon-comment"></i><span class="comment_total_count">1</span></a></li>
                     </ul>
                     <div class="single-post-share-list hide-external"><span class="mobile-hide">分享到</span>
-                        <div class="share-group"><a class="weixin mobile-hide" data-stat-hover="weixinfenxiang.click" href="javascript:void(0)" ref="nofollow" target="_blank"><i class="icon-weixin"></i><div class="panel-weixin"><section class="weixin-section"><p><img alt="【WISE 2.0】左志坚说做了十年内容仍困惑变现，“奇葩说”的马东摇了摇头" src="./detail_files/qrcode.php"></p></section><h3>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</h3></div></a><a class="weibo" data-stat-click="weibofenxiang.click" href="http://share.baidu.com/s?type=text&amp;searchPic=1&amp;sign=on&amp;to=tsina&amp;url=http://36kr.com/p/5040832.html&amp;title=%E3%80%90WISE%202.0%E3%80%91%E5%B7%A6%E5%BF%97%E5%9D%9A%E8%AF%B4%E5%81%9A%E4%BA%86%E5%8D%81%E5%B9%B4%E5%86%85%E5%AE%B9%E4%BB%8D%E5%9B%B0%E6%83%91%E5%8F%98%E7%8E%B0%EF%BC%8C%E2%80%9C%E5%A5%87%E8%91%A9%E8%AF%B4%E2%80%9D%E7%9A%84%E9%A9%AC%E4%B8%9C%E6%91%87%E4%BA%86%E6%91%87%E5%A4%B4&amp;key=595885820" ref="nofollow" target="_blank"><i class="icon-weibo"></i></a><a class="linkedin" data-stat-click="linkinfenxiang.click" href="http://share.baidu.com/s?type=text&amp;searchPic=0&amp;sign=on&amp;to=linkedin&amp;url=http://36kr.com/p/5040832.html&amp;title=%E3%80%90WISE%202.0%E3%80%91%E5%B7%A6%E5%BF%97%E5%9D%9A%E8%AF%B4%E5%81%9A%E4%BA%86%E5%8D%81%E5%B9%B4%E5%86%85%E5%AE%B9%E4%BB%8D%E5%9B%B0%E6%83%91%E5%8F%98%E7%8E%B0%EF%BC%8C%E2%80%9C%E5%A5%87%E8%91%A9%E8%AF%B4%E2%80%9D%E7%9A%84%E9%A9%AC%E4%B8%9C%E6%91%87%E4%BA%86%E6%91%87%E5%A4%B4" ref="nofollow" target="_blank"><i class="icon-linkedin"></i></a><a class="qq external mobile-hide" data-stat-click="QQfenxiang.click" href="http://connect.qq.com/widget/shareqq/index.html?url=http://36kr.com/p/5040832.html&amp;title=%E3%80%90WISE%202.0%E3%80%91%E5%B7%A6%E5%BF%97%E5%9D%9A%E8%AF%B4%E5%81%9A%E4%BA%86%E5%8D%81%E5%B9%B4%E5%86%85%E5%AE%B9%E4%BB%8D%E5%9B%B0%E6%83%91%E5%8F%98%E7%8E%B0%EF%BC%8C%E2%80%9C%E5%A5%87%E8%91%A9%E8%AF%B4%E2%80%9D%E7%9A%84%E9%A9%AC%E4%B8%9C%E6%91%87%E4%BA%86%E6%91%87%E5%A4%B4&amp;source=shareqq&amp;desc=%E5%88%9A%E7%9C%8B%E5%88%B0%E8%BF%99%E7%AF%87%E6%96%87%E7%AB%A0%E4%B8%8D%E9%94%99%EF%BC%8C%E6%8E%A8%E8%8D%90%E7%BB%99%E4%BD%A0%E7%9C%8B%E7%9C%8B%EF%BD%9E" ref="nofollow" target="_blank"><i class="icon-qq"></i></a><a class="twitter external mobile-hide" data-stat-click="twfenxiang.click" href="http://share.baidu.com/s?type=text&amp;searchPic=0&amp;sign=on&amp;to=twi&amp;url=http://36kr.com/p/5040832.html&amp;title=%E3%80%90WISE%202.0%E3%80%91%E5%B7%A6%E5%BF%97%E5%9D%9A%E8%AF%B4%E5%81%9A%E4%BA%86%E5%8D%81%E5%B9%B4%E5%86%85%E5%AE%B9%E4%BB%8D%E5%9B%B0%E6%83%91%E5%8F%98%E7%8E%B0%EF%BC%8C%E2%80%9C%E5%A5%87%E8%91%A9%E8%AF%B4%E2%80%9D%E7%9A%84%E9%A9%AC%E4%B8%9C%E6%91%87%E4%BA%86%E6%91%87%E5%A4%B4&amp;key=" ref="nofollow" target="_blank"><i class="icon-twitter"></i></a><a class="douban external mobile-hide" data-stat-click="doufanfenxiang.click" href="http://share.baidu.com/s?type=text&amp;searchPic=0&amp;sign=on&amp;to=douban&amp;url=http://36kr.com/p/5040832.html&amp;title=%E3%80%90WISE%202.0%E3%80%91%E5%B7%A6%E5%BF%97%E5%9D%9A%E8%AF%B4%E5%81%9A%E4%BA%86%E5%8D%81%E5%B9%B4%E5%86%85%E5%AE%B9%E4%BB%8D%E5%9B%B0%E6%83%91%E5%8F%98%E7%8E%B0%EF%BC%8C%E2%80%9C%E5%A5%87%E8%91%A9%E8%AF%B4%E2%80%9D%E7%9A%84%E9%A9%AC%E4%B8%9C%E6%91%87%E4%BA%86%E6%91%87%E5%A4%B4" ref="nofollow" target="_blank"><i class="icon-douban"></i></a><a class="renren external mobile-hide" data-stat-click="renrenfenxiang.click" href="http://share.baidu.com/s?type=text&amp;searchPic=0&amp;sign=on&amp;to=renren&amp;url=http://36kr.com/p/5040832.html&amp;title=%E3%80%90WISE%202.0%E3%80%91%E5%B7%A6%E5%BF%97%E5%9D%9A%E8%AF%B4%E5%81%9A%E4%BA%86%E5%8D%81%E5%B9%B4%E5%86%85%E5%AE%B9%E4%BB%8D%E5%9B%B0%E6%83%91%E5%8F%98%E7%8E%B0%EF%BC%8C%E2%80%9C%E5%A5%87%E8%91%A9%E8%AF%B4%E2%80%9D%E7%9A%84%E9%A9%AC%E4%B8%9C%E6%91%87%E4%BA%86%E6%91%87%E5%A4%B4" ref="nofollow" target="_blank"><i class="icon-renren"></i></a><a class="evernote external mobile-hide" data-stat-click="EVfenxiang.click" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"><i class="icon-evernote"></i></a>
+                        <div class="share-group">
+                            <a class="weixin mobile-hide" data-stat-hover="weixinfenxiang.click" href="javascript:void(0)" ref="nofollow" target="_blank">
+                                <i class="icon-weixin"></i>
+                                <div class="panel-weixin">
+                                    <section class="weixin-section">
+                                        <p>
+                                            <img alt="【WISE 2.0】左志坚说做了十年内容仍困惑变现，“奇葩说”的马东摇了摇头" src="#">
+                                        </p>
+                                    </section>
+                                    <h3>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</h3>
+                                </div>
+                            </a>
+                            <a class="weibo" data-stat-click="weibofenxiang.click" href="" ref="nofollow" target="_blank">
+                                <i class="icon-weibo"></i>
+                            </a>
+                            <a class="linkedin" data-stat-click="linkinfenxiang.click" href="" ref="nofollow" target="_blank">
+                                <i class="icon-linkedin"></i>
+                            </a>
+                            <a class="qq external mobile-hide" data-stat-click="QQfenxiang.click" href="" ref="nofollow" target="_blank">
+                                <i class="icon-qq"></i>
+                            </a>
+                            <a class="twitter external mobile-hide" data-stat-click="twfenxiang.click" href="" ref="nofollow" target="_blank">
+                                <i class="icon-twitter"></i>
+                            </a>
+                            <a class="douban external mobile-hide" data-stat-click="doufanfenxiang.click" href="" ref="nofollow" target="_blank">
+                                <i class="icon-douban"></i>
+                            </a>
+                            <a class="renren external mobile-hide" data-stat-click="renrenfenxiang.click" href="" ref="nofollow" target="_blank">
+                                <i class="icon-renren"></i>
+                            </a>
+                            <a class="evernote external mobile-hide" data-stat-click="EVfenxiang.click" href="" ref="nofollow" target="_blank">
+                                <i class="icon-evernote"></i>
+                            </a>
                             <a class="icon-add J_showAllShareBtn" data-stat-click="gengduofenxiang.click" href="javascript:void(0);"></a>
                         </div>
                     </div>
@@ -36,30 +70,39 @@
             <section class="single-post-comment english-wrap">
                 <h2>文章评论(<span class="comment_form_count">1</span>)</h2>
                 <div class="single-post-comment-reply">
+                    <div class="single-post-comment__form cf require-login" style="display:none;">
+                        <form class="comment_form" method="post">
+                            <textarea class="textarea" data-widearea="enable" id="post" name="comment[content]" placeholder="你怎么看？"></textarea>
+                            <span class="focus-tips textarea-focus-tips">请回复有价值的信息，无意义的评论将很快被删除，账号将被禁止发言。</span>
+                            <span class="reply_message reply_msg">回复：吴城<span onclick="delete_reply_comment(this)">X</span></span>
+                        </form>
+                    </div>
+                    <div class="bottom require-login" id="J_userInfo">
+                        <div class="meta">
+                            <span class="avatar" style=""></span>
+                            <span class="user-info">signed as &nbsp;<a href="javascript:void(0)"id="J_loginname">新用户566856</a></span>
+                            </span>
+                        </div>
+                        <button class="ladda-button comment-submit-btn right" data-post-id="5041259" data-spinner-size="32" data-stat-click="pinglun.fabupinglun.click" data-style="slide-down">
+                            <span class="ladda-label">提交评论</span>
+                        </button>
+                    </div>
                     <div style="clear:both"></div>
-                    <div class="bottom">
+                    <div class="bottom J_requirelogin">
                         <div class="meta left cf"><a class="login_before_comment" href="http://36kr.com/users/sign_in?ok_url=%2Fp%2F5040832.html">登录</a>后参与讨论</div>
                     </div>
                 </div>
                 <hr>
-                <div async="true" async-callback="commentsLoadComplete($('#article-section-5040832'))" async-url="/asynces/posts/39833/comments.js" class="single-post-comment__comments" style="display: block;">
-                    <div class="comments_total_count" data-message="" data-total-count="1"></div>
-                    <a name="#comment-351853"></a>
-                    <div class="comment cf comment_details" data-comment-id="351853">
-                        <div class="avatar left">
-                            <a href="javascript:void(0)"><img alt="36氪用户菲菲小" data-lazyload="http://ww4.sinaimg.cn/crop.0.0.512.512.1024/4f02c7bejw8es1epl4d9qj20e80e8t96.jpg" raw_iden="287993" class="before-fade-in"></a>
-                        </div>
-                        <div class="comment-wrapper">
-                            <div class="postmeta"><a class="user_info_name" href="javascript:void(0)">菲菲小</a>&nbsp;•&nbsp;
-                                <abbr class="timeago" title="2015-12-08 18:24:21 +0800">2015/12/08 18:24</abbr>
-                            </div>
-                            <div class="commemt-main">
-                                <p>赞</p>
-                            </div>
-                            <div class="opts"></div><a class="pull-right" href="http://36kr.com/users/sign_in?ok_url=%2Fp%2F5040832.html%3Ft%3D1449669626"> 回复</a></div>
-                    </div>
+                <div async="true" id="J_comments" class="single-post-comment__comments" style="display: block;">
                 </div>
             </section>
         </div>
     </div>
 </div>
+#script()
+    require(['widget/detail/detail'], function(app) {
+        app({
+            commentUrl : "$commentUrl"
+        });
+    });
+#end

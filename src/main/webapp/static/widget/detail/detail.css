@@ -18,7 +18,19 @@ body {
 [placeholder]:-ms-input-placeholder {
     font-family: "Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif
 }
-
+.bottom .user-info{
+    display: inline-block;
+    vertical-align: middle;
+}
+.bottom .user-info a{
+    float: none;
+    display: inline-block;
+    color: #3da9f7;
+}
+.bottom .user-info a:hover{
+    color: #3da9f7;
+    text-decoration: none;
+}
 a {
     color: #333333;
     -webkit-transition: all 0.2s ease;
@@ -247,7 +259,7 @@ a:hover {
 .badge-pdn .mask-tags {
     background: #f08945
 }
-
+.
 .ad-wrapper {
     position: relative
 }

@@ -1,6 +1,13 @@
-<div class="categories J_newsListNavBar">
+<div class="categories J_newsListNavBar" id="J_navBar">
     <a class="active tab firstList" data="" data-type="all" href="javascript:;" id="column_header_all">全部</a>
     #foreach ($category in $categories)
     <a class="tab" data="$category.id" href="javascript:;" id="column_header_${category.code}">$category.name</a>
     #end
 </div>
+#script()
+    require(['widget/listbar/listbar'], function(app) {
+        app({
+            dom : '.J_newsListNavBar'
+        });
+    });
+#end

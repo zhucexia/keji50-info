@@ -350,6 +350,11 @@ a img {
     display: none
 }
 
+.J_newsListNavBar.fixed{
+    position: fixed;
+    top: 0;
+    width: 810px;
+}
 button.mfp-close,
 button.mfp-arrow {
     overflow: visible;
@@ -2288,7 +2293,7 @@ a:hover {
 .share-group a.icon-add {
     width: 16px;
     height: 16px;
-    background: url("../images/21947d6b.icon-plus.png") no-repeat;
+    background: url("/info/static/images/icon-plus.png") no-repeat;
     content: " ";
     vertical-align: middle;
     margin-left: 6px;

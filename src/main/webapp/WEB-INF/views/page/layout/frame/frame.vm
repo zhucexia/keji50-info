@@ -23,8 +23,9 @@
     #require("components/jquery/jquery.js")
     #require("page/layout/frame/frame.vm")
     <script>
+    var loginInfo;
     window.onload = function(){
-        var loginInfo = window.frames['login'].document.body.innerHTML ;
+        loginInfo = window.frames['login'].document.body.innerHTML ;
         loginInfo = loginInfo && eval('(' + loginInfo + ')');
         if(loginInfo){
             if(loginInfo.isUserLogin){

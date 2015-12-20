@@ -18,7 +18,7 @@
                 <section class="single-post-tags">
                     <span class="tag-tip">标签：</span>
                         #foreach ($tag in $info.getTags())
-                            <span class="tag-item"><a href="$rc.getContextPath()/tag/$tag" target="_blank">$tag</a></span>
+                            <span class="tag-item"><a href="javascript:;" target="_blank">$tag</a></span>
                         #end
                     </span>
                 </section>
@@ -77,10 +77,10 @@
                             <span class="reply_message reply_msg">回复：吴城<span onclick="delete_reply_comment(this)">X</span></span>
                         </form>
                     </div>
-                    <div class="bottom require-login" id="J_userInfo">
+                    <div class="bottom require-login" id="J_userInfo" style="display:none">
                         <div class="meta">
                             <span class="avatar" style=""></span>
-                            <span class="user-info">signed as &nbsp;<a href="javascript:void(0)"id="J_loginname">新用户566856</a></span>
+                            <span class="user-info">signed as &nbsp;<a href="javascript:void(0)"id="J_loginname"></a></span>
                             </span>
                         </div>
                         <button class="ladda-button comment-submit-btn right" data-post-id="5041259" data-spinner-size="32" data-stat-click="pinglun.fabupinglun.click" data-style="slide-down">

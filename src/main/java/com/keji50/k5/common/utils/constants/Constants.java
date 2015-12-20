@@ -42,6 +42,9 @@ public class Constants {
     
     // 以下为返回给页面的参数
     
+    // 用户默认头像
+    public final static String RESPONSE_DEFAULT_ACCOUNT_IMAGE = "default_account_image";
+    
     // 科技50 域名
     public final static String RESPONSE_KEJI50_DOMAIN = "keji50_domain";
 

@@ -9,7 +9,6 @@ import com.keji50.k5.dao.po.AccountPo;
 import com.keji50.k5.dao.po.InfoPo;
 import com.keji50.k5.service.InfoCategoryService;
 import com.keji50.k5.service.InfoService;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -46,6 +45,8 @@ public class InfoController {
 
     @RequestMapping(value = "", method = RequestMethod.GET)
     public String index(Model model) {
+    	initModel(model);
+    	
         // 文章目录
         model.addAttribute(Constants.RESPONSE_INFO_CATEGORIES, infoCategoryService.getInfoCatetories());
 
@@ -66,8 +67,7 @@ public class InfoController {
         }
         // 资讯站主页标题
         model.addAttribute(Constants.RESPONSE_TITLE, "资讯首页_科技50");
-        // 科技50域名
-        model.addAttribute(Constants.RESPONSE_KEJI50_DOMAIN, Constants.KEJI50_DOMAIN);
+
         return "page/index/index";
     }
 
@@ -83,6 +83,8 @@ public class InfoController {
             return "404";
         }
 
+        initModel(model);
+
         Page<InfoPo> infosNearby = infoService.getInfosNearby(info.getAuthor().getId());
         // 文章详情
         model.addAttribute(Constants.RESPONSE_INFO, info);
@@ -94,8 +96,6 @@ public class InfoController {
         model.addAttribute(Constants.RESPONSE_INFOS_HOT, infoService.getHotInfos());
         // 资讯详情页标题
         model.addAttribute(Constants.RESPONSE_TITLE, info.getTitle() + "_科技50");
-        // 科技50域名
-        model.addAttribute(Constants.RESPONSE_KEJI50_DOMAIN, Constants.KEJI50_DOMAIN);
         return "page/detail/detail";
     }
 
@@ -109,6 +109,8 @@ public class InfoController {
         if (author == null) {
             return "404";
         }
+
+        initModel(model);
 
         Map<String, Object> conditions = new HashMap<String, Object>();
         conditions.put(Constants.AUTHOR_ID, authorId);
@@ -128,8 +130,6 @@ public class InfoController {
         model.addAttribute(Constants.RESPONSE_INFOS_HOT, infoService.getHotInfos());
         // 作者详情页标题
         model.addAttribute(Constants.RESPONSE_TITLE, author.getNickname() + "的文章_科技50");
-        // 科技50域名
-        model.addAttribute(Constants.RESPONSE_KEJI50_DOMAIN, Constants.KEJI50_DOMAIN);
         return "page/author/author";
     }
 
@@ -175,6 +175,14 @@ public class InfoController {
 
     }
 
+    private void initModel(Model model) {
+        // 科技50域名
+        model.addAttribute(Constants.RESPONSE_KEJI50_DOMAIN, Constants.KEJI50_DOMAIN);
+        
+        // 用户默认头像
+        model.addAttribute(Constants.RESPONSE_DEFAULT_ACCOUNT_IMAGE, Constants.DEFAULT_ACCOUNT_IMAGE);
+    }
+    
     private int getInfoOffset(HttpServletRequest request) {
         String offset = request.getParameter(Constants.INFO_OFFSET);
         if (StringUtils.isEmpty(offset)) {

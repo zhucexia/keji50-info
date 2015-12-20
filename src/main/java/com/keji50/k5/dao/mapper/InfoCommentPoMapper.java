@@ -16,5 +16,8 @@ public interface InfoCommentPoMapper {
 	 * @return
 	 */
 	List<InfoCommentPo> selectByCondition(Map<String, Object> condition);
+	
+	
+	int addComment(InfoCommentPo comment);
 
 }

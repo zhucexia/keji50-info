@@ -149,7 +149,7 @@ public class InfoController {
     @ResponseBody
     public JSONObject ajaxInfosByCategory(@PathVariable("id") int infocategoryId, HttpServletRequest request) {
         if (infocategoryId <= 0) {
-            return WebUtils.toResponse(Collections.emptyList(), request);
+            return WebUtils.toFailedResponse();
         }
 
         try {
@@ -164,7 +164,7 @@ public class InfoController {
     @ResponseBody
     public JSONObject ajaxInfosByAuthor(@PathVariable("id") int authorId, HttpServletRequest request) {
         if (authorId <= 0) {
-            return WebUtils.toResponse(Collections.emptyList(), request);
+            return WebUtils.toFailedResponse();
         }
         try {
             List<InfoPo> infos = infoService.getInfosByAuthor(authorId, getInfoOffset(request), getCommand(request));

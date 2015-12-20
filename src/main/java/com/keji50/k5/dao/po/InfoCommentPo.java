@@ -1,11 +1,23 @@
 package com.keji50.k5.dao.po;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
+
 import lombok.Data;
 
 @Data
 public class InfoCommentPo {
 
+	public InfoCommentPo() {
+		
+	}
+	
+	public InfoCommentPo(int authorId, int infoId) {
+		this.author = new AccountPo();
+		this.author.setId(authorId);
+		this.infoId = infoId;
+	}
+	
 	/**
 	 * 主键ID
 	 */
@@ -39,6 +51,10 @@ public class InfoCommentPo {
 	/**
 	 * 评论状态
 	 */
-	private String state;
+	private String state = "c";
+	
+	public String getCreateDate() {
+        return createDate == null ? "" : new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(createDate);
+    }
 
 }

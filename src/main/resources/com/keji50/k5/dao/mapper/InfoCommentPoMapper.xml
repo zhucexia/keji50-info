@@ -36,4 +36,8 @@
 		order by id desc
 	</select>
 	
+	<insert id="addComment" parameterType="com.keji50.k5.dao.po.InfoCommentPo">
+		insert into info_comment(author_id, to_author, info_id, content, create_date) values (#{author.id}, #{toAuthor}, #{infoId}, #{content}, now())
+	</insert>
+	
 </mapper>

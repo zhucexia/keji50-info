@@ -37,4 +37,8 @@ public class InfoCommentService {
 
 		return infoCommentPoMapper.selectByCondition(condition);
 	}
+	
+	public boolean postComment(InfoCommentPo comment) {
+		return infoCommentPoMapper.addComment(comment) > 0; 
+	}
 }

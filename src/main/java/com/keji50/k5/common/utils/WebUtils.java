@@ -17,11 +17,11 @@ import com.keji50.k5.common.utils.constants.ResponseCode;
  */
 public class WebUtils {
 
+    public static final String KEY_CODE = "code";
+
+    public static final String KEY_MESSAGE = "message";
+    
     private static final String KEY_DATA = "data";
-
-    private static final String KEY_CODE = "code";
-
-    private static final String KEY_MESSAGE = "message";
     
     private static final String KEY_CONTEXT_PATH = "contextpath";
 

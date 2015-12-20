@@ -33,6 +33,10 @@ public class Constants {
     
     public final static String AUTHOR_ID = "author_id";
     
+    public final static String TO_AUTHOR = "to_author";
+    
+    public final static String CONTENT = "content";
+    
     public final static String COMMAND = "d";
     
     

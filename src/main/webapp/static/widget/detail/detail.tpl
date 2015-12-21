@@ -9,6 +9,15 @@
             <abbr class="timeago" title="<%=comment.createDate %>"><%=comment.createDate %></abbr>
         </div>
         <div class="commemt-main">
+        	<%  if(comment.state == 'c') { %>
+        	<span title="该评论正在审核中, 仅对本人可见" class="badge badge-warning">审核中</span>
+        	<% 
+        	    } 
+        	    
+        		if (comment.toAuthor) {
+        	%>
+        	<span class="replay-tips">回复<%=comment.toAuthor %>：</span>
+        	<% } %>
             <p><%=comment.content %></p>
         </div>
         <div class="opts"></div>

@@ -25,6 +25,24 @@
                 "components/mask/mask.css"
             ]
         },
+        "components/snsShare/snsShare.css": {
+            "uri": "/info/static/components/snsShare/snsShare.css",
+            "type": "css"
+        },
+        "components/snsShare/snsShare.js": {
+            "uri": "/info/static/components/snsShare/snsShare.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common/web:jquery": "common/web:jquery.js"
+                },
+                "moduleId": "components/snsShare/snsShare"
+            },
+            "deps": [
+                "common/web:jquery.js",
+                "components/snsShare/snsShare.css"
+            ]
+        },
         "components/tabs/tabs.js": {
             "uri": "/info/static/components/tabs/tabs.js",
             "type": "js",
@@ -180,6 +198,37 @@
             "type": "vm",
             "deps": [
                 "widget/footer/footer.css"
+            ]
+        },
+        "widget/go2top/go2top.css": {
+            "uri": "/info/static/widget/go2top/go2top.css",
+            "type": "css"
+        },
+        "widget/go2top/go2top.js": {
+            "uri": "/info/static/widget/go2top/go2top.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "components/jquery/jquery": "components/jquery/jquery.js"
+                },
+                "moduleId": "widget/go2top/go2top"
+            },
+            "deps": [
+                "components/jquery/jquery.js",
+                "widget/go2top/go2top.css"
+            ]
+        },
+        "widget/go2top/go2top.vm": {
+            "uri": "/widget/go2top/go2top.vm",
+            "type": "vm",
+            "extras": {
+                "paths": {
+                    "widget/go2top/go2top": "widget/go2top/go2top.js"
+                }
+            },
+            "deps": [
+                "widget/go2top/go2top.js",
+                "widget/go2top/go2top.css"
             ]
         },
         "widget/header/header.css": {

@@ -1,17 +1,16 @@
 package com.keji50.k5.web.controller;
 
-import java.util.List;
+import java.util.Arrays;
 
+import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import com.alibaba.fastjson.JSONObject;
 import com.keji50.k5.common.utils.WebUtils;
 import com.keji50.k5.common.utils.constants.Constants;
@@ -70,11 +69,11 @@ public class InfoCommentController {
 		comment.setToAuthor(toAuthor);
 		comment.setContent(content);
 		try {
-			if (infoCommentService.saveComment(comment)) {
-				return WebUtils.toResponse(comment, request);
-			} else {
-				return WebUtils.toFailedResponse();
-			}
+		    if (!infoCommentService.saveComment(comment)) {
+		        return WebUtils.toFailedResponse();
+		    }
+		    
+		    return WebUtils.toResponse(Arrays.asList(infoCommentService.getCommentById(comment.getId())), request);
 		} catch (Exception e) {
 			return WebUtils.toFailedResponse();
 		}

@@ -1,0 +1,9 @@
+.ui-sns-container a{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+}
+.ui-sns-container li{
+	list-style: none;
+	float: left;
+}

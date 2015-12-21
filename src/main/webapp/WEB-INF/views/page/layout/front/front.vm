@@ -7,7 +7,7 @@
         #end
 
         #block("content") #end
-
+        #widget("widget/go2top/go2top.vm")
         #block("footer")
 			#widget("widget/footer/footer.vm")
         #end

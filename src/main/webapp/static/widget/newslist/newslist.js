@@ -38,13 +38,13 @@ var app = module.exports = function(opt) {
 			$('.J_newsListNavBar').length && $('.J_newsListNavBar').delegate('.tab','click',function(e){
 				var url = ($(this).hasClass('firstList') ? opt.newsUrl : opt.pageCateUrl) + $(this).attr('data')
 				$('.J_listLoadMore').removeClass('loading no-data');
+				$(e.target).addClass('active').siblings().removeClass('active');
 				_this.getList(url,{
 					d : 'next'
 				},function(data){
 					if(data.code == 0){
 						var result = Template.parse(_this.listTemplate,{data:data});
 						$("#listWrap").html(result);
-						$(e.target).addClass('active').siblings().removeClass('active');
 			   		}
 				});
 			});

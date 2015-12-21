@@ -37,7 +37,7 @@
 		order by id desc
 	</select>
 	
-	<select id="selectById" parameterType="java.lang.Integer">
+	<select id="selectById" parameterType="java.lang.Integer" resultMap="InfoCommentResultMap">
 		select <include refid="Info_Comment_Column_List" />, <include refid="Account_Column_List" /> from info_comment a
 		left join account b on a.author_id = b.id
 		where a.id = #{id}

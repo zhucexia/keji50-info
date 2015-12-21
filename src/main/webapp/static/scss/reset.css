@@ -4,7 +4,7 @@ body {
     border: 0;
     line-height: 1.5;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 div,
@@ -37,7 +37,7 @@ audio,
 video {
     border: 0;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 h1,
@@ -350,11 +350,12 @@ a img {
     display: none
 }
 
-.J_newsListNavBar.fixed{
+.J_newsListNavBar.fixed {
     position: fixed;
     top: 0;
     width: 810px;
 }
+
 button.mfp-close,
 button.mfp-arrow {
     overflow: visible;
@@ -877,22 +878,8 @@ a:hover {
     margin: 0 auto
 }
 
-@media (min-width: 1200px) {
-    .container {
-        width: 1170px
-    }
-}
-
-@media (min-width: 800px) and (max-width: 1200px) {
-    .container {
-        width: 1000px
-    }
-}
-
-@media (max-width: 800px) {
-    .container {
-        width: auto
-    }
+.container {
+    width: 1170px
 }
 
 .clearfix {

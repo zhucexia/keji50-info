@@ -39,12 +39,10 @@ public class InfoCommentService {
     }
 
     public boolean saveComment(InfoCommentPo comment) {
-        int count = infoCommentPoMapper.insert(comment);
-        if (count <= 0) {
-            return false;
-        }
-
-        comment = infoCommentPoMapper.selectById(comment.getId());
-        return true;
+        return infoCommentPoMapper.insert(comment) > 0;
+    }
+    
+    public InfoCommentPo getCommentById(int id) {
+        return infoCommentPoMapper.selectById(id);
     }
 }

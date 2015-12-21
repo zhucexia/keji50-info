@@ -37,8 +37,17 @@
 		order by id desc
 	</select>
 	
-	<insert id="addComment" parameterType="com.keji50.k5.dao.po.InfoCommentPo">
+	<select id="selectById" parameterType="java.lang.Integer">
+		select <include refid="Info_Comment_Column_List" />, <include refid="Account_Column_List" /> from info_comment a
+		left join account b on a.author_id = b.id
+		where a.id = #{id}
+	</select>
+	
+	<insert id="insert" parameterType="com.keji50.k5.dao.po.InfoCommentPo">
 		insert into info_comment(author_id, to_author, info_id, content, create_date) values (#{author.id}, #{toAuthor}, #{infoId}, #{content}, now())
+		<selectKey resultType="java.lang.Integer" keyProperty="id">
+    	select LAST_INSERT_ID()
+    	</selectKey>
 	</insert>
 	
 </mapper>

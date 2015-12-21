@@ -24,21 +24,27 @@ import org.springframework.stereotype.Service;
 @Service(value = "infoCommentService")
 public class InfoCommentService {
 
-	@Resource(name = "infoCommentPoMapper")
-	private InfoCommentPoMapper infoCommentPoMapper;
+    @Resource(name = "infoCommentPoMapper")
+    private InfoCommentPoMapper infoCommentPoMapper;
 
-	public List<InfoCommentPo> getCommentsByInfo(int infoId, int authorId) {
-		if (infoId <= 0) {
-			return Collections.emptyList();
-		}
-		Map<String, Object> condition = new HashMap<String, Object>();
-		condition.put(Constants.INFO_ID, infoId);
-		condition.put(Constants.AUTHOR_ID, authorId);
+    public List<InfoCommentPo> getCommentsByInfo(int infoId, int authorId) {
+        if (infoId <= 0) {
+            return Collections.emptyList();
+        }
+        Map<String, Object> condition = new HashMap<String, Object>();
+        condition.put(Constants.INFO_ID, infoId);
+        condition.put(Constants.AUTHOR_ID, authorId);
 
-		return infoCommentPoMapper.selectByCondition(condition);
-	}
-	
-	public boolean saveComment(InfoCommentPo comment) {
-		return infoCommentPoMapper.addComment(comment) > 0; 
-	}
+        return infoCommentPoMapper.selectByCondition(condition);
+    }
+
+    public boolean saveComment(InfoCommentPo comment) {
+        int count = infoCommentPoMapper.insert(comment);
+        if (count <= 0) {
+            return false;
+        }
+
+        comment = infoCommentPoMapper.selectById(comment.getId());
+        return true;
+    }
 }

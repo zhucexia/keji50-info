@@ -4,7 +4,7 @@ var Template = require('components/template/template');
 var app = module.exports = function(opt){
 	var detail = {
 		init : function(){
-			this.commentTemplate = "<% for(var i = 0,len = data.data.length; i<len ;i++){%>\r\n<% var comment = data.data[i],path = data.contextpath ; %>\r\n<div class=\"comment cf comment_details\" data-comment-id=\"<%=comment.id %>\">\r\n    <div class=\"avatar left\">\r\n        <a href=\"javascript:void(0)\"><img alt=\"科技50用户<%=comment.author.nickname %>\" data-lazyload=\"<%=comment.author.image %>\" raw_iden=\"<%=comment.id %>\" class=\"before-fade-in\"></a>\r\n    </div>\r\n    <div class=\"comment-wrapper\">\r\n        <div class=\"postmeta\"><a class=\"user_info_name\" href=\"javascript:void(0)\"><%=comment.author.nickname %></a>&nbsp;•&nbsp;\r\n            <abbr class=\"timeago\" title=\"<%=comment.createDate %>\"><%=comment.createDate %></abbr>\r\n        </div>\r\n        <div class=\"commemt-main\">\r\n            <p><%=comment.content %></p>\r\n        </div>\r\n        <div class=\"opts\"></div>\r\n        <a class=\"pull-right\" href=\"javascript:;\"> 回复</a></div>\r\n</div>\r\n\r\n<%}%>   ";
+			this.commentTemplate = "<% for(var i = 0,len = data.data.length; i<len ;i++){%>\n<% var comment = data.data[i],path = data.contextpath ; %>\n<div class=\"comment cf comment_details\" data-comment-id=\"<%=comment.id %>\">\n    <div class=\"avatar left\">\n        <a href=\"javascript:void(0)\"><img alt=\"科技50用户<%=comment.author.nickname %>\" src=\"<%=comment.author.image %>\" raw_iden=\"<%=comment.id %>\" class=\"before-fade-in\"></a>\n    </div>\n    <div class=\"comment-wrapper\">\n        <div class=\"postmeta\"><a class=\"user_info_name\" href=\"javascript:void(0)\"><%=comment.author.nickname %></a>&nbsp;•&nbsp;\n            <abbr class=\"timeago\" title=\"<%=comment.createDate %>\"><%=comment.createDate %></abbr>\n        </div>\n        <div class=\"commemt-main\">\n            <p><%=comment.content %></p>\n        </div>\n        <div class=\"opts\"></div>\n        <a class=\"pull-right\" href=\"javascript:;\"> 回复</a></div>\n</div>\n\n<%}%>   ";
 			this.addEvent();
 		},
 		addEvent : function(){
@@ -12,9 +12,8 @@ var app = module.exports = function(opt){
 				i = 0
 			var getlogin = setInterval(function(){
 				i++;
-				console.log(i);
 				console.log(loginInfo)
-				if(loginInfo || i > 100){
+				if(loginInfo || i > 10){
 					clearInterval(getlogin);
 					if(loginInfo && loginInfo.isUserLogin){
 						$('#J_userInfo').show().find('.avatar').css('backgroundImage',loginInfo.image);
@@ -30,6 +29,8 @@ var app = module.exports = function(opt){
 					},'get',function(data){
 						if(data.code == 0){
 							if(data.data.length){
+								$('#commentTotalCount').html(data.data.length);
+								$('#commentFormCount').html(data.data.length);
 								var result = Template.parse(_this.commentTemplate,{data:data});
 								$('#J_comments').html(result);
 							}

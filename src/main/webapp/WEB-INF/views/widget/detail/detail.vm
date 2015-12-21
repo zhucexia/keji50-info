@@ -26,7 +26,7 @@
                 <!-- 社交分享 -->
                 <section class="single-post-share" data-stat-module="Wenzhang">
                     <ul class="actions">
-                        <li><a class="comment-btn J_addCommentBtn" data-post-id="5040832" data-stat-click="pinglunshuliang.click" href="javascript:void(0)"><i class="icon icon-comment"></i><span class="comment_total_count">1</span></a></li>
+                        <li><a class="comment-btn J_addCommentBtn" data-post-id="5040832" data-stat-click="pinglunshuliang.click" href="javascript:void(0)"><i class="icon icon-comment"></i><span id="commentTotalCount" class="comment_total_count">0</span></a></li>
                     </ul>
                     <div class="single-post-share-list hide-external"><span class="mobile-hide">分享到</span>
                         <div class="share-group">
@@ -68,7 +68,7 @@
                 </section>
             </article>
             <section class="single-post-comment english-wrap">
-                <h2>文章评论(<span class="comment_form_count">1</span>)</h2>
+                <h2>文章评论(<span id="commentFormCount" class="comment_form_count">0</span>)</h2>
                 <div class="single-post-comment-reply">
                     <div class="single-post-comment__form cf require-login" style="display:none;">
                         <form class="comment_form" method="post">
@@ -89,7 +89,7 @@
                     </div>
                     <div style="clear:both"></div>
                     <div class="bottom J_requirelogin">
-                        <div class="meta left cf"><a class="login_before_comment" href="http://36kr.com/users/sign_in?ok_url=%2Fp%2F5040832.html">登录</a>后参与讨论</div>
+                        <div class="meta left cf"><a class="login_before_comment" href="$keji50_domain/web?command=Login">登录</a>后参与讨论</div>
                     </div>
                 </div>
                 <hr>

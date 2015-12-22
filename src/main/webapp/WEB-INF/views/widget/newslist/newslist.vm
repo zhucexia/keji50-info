@@ -12,7 +12,7 @@
                     <a class="title info_flow_news_title" href="$rc.getContextPath()/p/$info.id" target="_blank">$info.title</a>
                     <div class="author">
                     <a href="$rc.getContextPath()/a/$info.author.id">
-                        <span class="avatar before-fade-in" style="background-image: url($info.author.image);"></span>
+                        <span class="avatar before-fade-in" style="background-image: url($info.author.image);filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='$info.author.image',sizingMethod='scale'"></span>
                         <span class="name">$info.author.getNickname()</span></a>
                         <span class="time">&nbsp;•&nbsp;<time class="timeago" title="$info.getCreateDate()" datetime="$info.getCreateDate()">$info.getCreateDate()</time></span>
                     </div>

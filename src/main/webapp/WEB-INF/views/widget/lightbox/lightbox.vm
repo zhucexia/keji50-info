@@ -9,7 +9,7 @@
     		#set($infoSuggest = $infosSuggest.get(1))
     	#end
         <div class="block wider article">
-        	<a data-stat-click="dingbu.1.click" href="$rc.getContextPath()/p/$infoSuggest.id" id="headline_one" target="_blank" class="before-fade-in after-fade-in" style="background-image: url($infoSuggest.image);">
+        	<a data-stat-click="dingbu.1.click" href="$rc.getContextPath()/p/$infoSuggest.id" id="headline_one" target="_blank" class="before-fade-in after-fade-in" style="background-image: url($infoSuggest.image);filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='$infoSuggest.image',sizingMethod='scale');">
         		<span class="mask-tags" data-type="$infoSuggest.infoCategory.code" style="background-color: $infoSuggest.infoCategory.colorCode">$infoSuggest.infoCategory.name</span>
         		<span>$infoSuggest.title</span>
         	</a>
@@ -19,8 +19,8 @@
         	#set($infoSuggest = $infosSuggest.get(2))
         #end
         <div class="block article">
-        	<a data-stat-click="dingbu.2.click" href="$rc.getContextPath()/p/$infoSuggest.id" id="headline_two" target="_blank" class="before-fade-in after-fade-in" style="background-image: url($infoSuggest.image);">
-        		<span class="mask-tags" data-type="$infoSuggest.infoCategory.code" style="background-color: $infoSuggest.infoCategory.colorCode">$infoSuggest.infoCategory.name</span>
+        	<a data-stat-click="dingbu.2.click" href="$rc.getContextPath()/p/$infoSuggest.id" id="headline_two" target="_blank" class="before-fade-in after-fade-in" style="background-image: url($infoSuggest.image);filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='$infoSuggest.image',sizingMethod='scale'">
+        		<span class="mask-tags" data-type="$infoSuggest.infoCategory.code" style="background-color: $infoSuggest.infoCategory.colorCode;">$infoSuggest.infoCategory.name</span>
         		<span>$infoSuggest.title</span>
         	</a>
         </div>
@@ -29,7 +29,7 @@
         	#set($infoSuggest = $infosSuggest.get(3))
         #end
         <div class="block article">
-            <a data-stat-click="dingbu.3.click" href="$rc.getContextPath()/p/$infoSuggest.id" id="headline_three" target="_blank" class="before-fade-in after-fade-in" style="background-image:url($infoSuggest.image)">
+            <a data-stat-click="dingbu.3.click" href="$rc.getContextPath()/p/$infoSuggest.id" id="headline_three" target="_blank" class="before-fade-in after-fade-in" style="background-image:url($infoSuggest.image);filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='$infoSuggest.image',sizingMethod='scale'">
             	<span class="mask-tags" data-type="$infoSuggest.infoCategory.code" style="background-color: $infoSuggest.infoCategory.colorCode">$infoSuggest.infoCategory.name</span>
         		<span>$infoSuggest.title</span>
             </a>
@@ -39,7 +39,7 @@
         	#set($infoSuggest = $infosSuggest.get(4))
         #end
         <div class="block article">
-        	<a data-stat-click="dingbu.4.click" href="$rc.getContextPath()/p/$infoSuggest.id" id="headline_four" target="_blank" class="before-fade-in after-fade-in" style="background-image: url($infoSuggest.image);">
+        	<a data-stat-click="dingbu.4.click" href="$rc.getContextPath()/p/$infoSuggest.id" id="headline_four" target="_blank" class="before-fade-in after-fade-in" style="background-image: url($infoSuggest.image);filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='$infoSuggest.image',sizingMethod='scale'">
         		<span class="mask-tags" data-type="$infoSuggest.infoCategory.code" style="background-color: $infoSuggest.infoCategory.colorCode">$infoSuggest.infoCategory.name</span>
         		<span>$infoSuggest.title</span>
         	</a>
@@ -49,7 +49,7 @@
         	#set($infoSuggest = $infosSuggest.get(5))
         #end
         <div class="block article">
-            <a data-stat-click="dingbu.5.click" href="$rc.getContextPath()/p/$infoSuggest.id" id="headline_five" target="_blank" class="before-fade-in after-fade-in" style="background-image: url($infoSuggest.image);">
+            <a data-stat-click="dingbu.5.click" href="$rc.getContextPath()/p/$infoSuggest.id" id="headline_five" target="_blank" class="before-fade-in after-fade-in" style="background-image: url($infoSuggest.image);filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='$infoSuggest.image',sizingMethod='scale'">
         		<span class="mask-tags" data-type="$infoSuggest.infoCategory.code" style="background-color: $infoSuggest.infoCategory.colorCode">$infoSuggest.infoCategory.name</span>
         		<span>$infoSuggest.title</span>
         	</a>

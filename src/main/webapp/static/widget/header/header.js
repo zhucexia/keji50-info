@@ -1,3 +1,1 @@
-define('widget/header/header', function(require, exports, module) {
-
-});
+define("widget/header/header",function(){});

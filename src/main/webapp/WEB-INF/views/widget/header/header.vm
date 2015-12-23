@@ -11,18 +11,12 @@
             <a href="$keji50_domain/web?command=aboutus">关于我们</a>
         </div>
         <div class="topLink_2 fr">
-        	
-        #* 
-		<c:if test="${sessionScope.login}">    
-            <span><a href="#"><c:out value="${sessionScope.account.nickname}"/></a></span>     
-            <span><a href="<c:url value="/web?command=Logout"/>">退出</a></span>     
-        </c:if>    *#
-            <div class="J_unlogin">
+            <div id="J_unlogin">
                 <a href="$keji50_domain/web?command=Login" class="ico-user">登录</a>
                 <a href="$keji50_domain/web?command=Register">注册</a>
             </div>
-            <div class="J_logined" style="display:none;">
-                <a href="javascript:;" class="loginUser ico-user"></a>  
+            <div id="J_logined" style="display:none;">
+                <a href="javascript:;" id="loginUser" class="ico-user"></a>  
                 <a href="$keji50_domain/web?command=Logout">退出</a> 
             </div>
             <a href="$keji50_domain/web?command=Release_pro" class="ico-edit">发布项目</a>

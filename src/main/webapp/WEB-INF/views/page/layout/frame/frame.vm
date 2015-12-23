@@ -7,10 +7,11 @@
         <title>$title #if( $titleAffix ) - $titleAffix#end</title>
         <link rel="shortcut icon" type="image/x-icon" href="/info/static/images/favicon.ico" />
         <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         #require("static/scss/reset.css")
+        #require("components/jquery/jquery.js")
     #end
     #body()
         
@@ -20,20 +21,22 @@
         </div>
     #end
     ## 需要依赖一下自己，否则该 vm 中依赖没法自动加载进来。
-    #require("components/jquery/jquery.js")
     #require("page/layout/frame/frame.vm")
     <script>
     var loginInfo;
     window.onload = function(){
         loginInfo = window.frames['login'].document.body.innerHTML ;
         loginInfo = loginInfo && eval('(' + loginInfo + ')');
+        var unlogin = document.getElementById('J_unlogin'),
+            logined = document.getElementById('J_logined');
         if(loginInfo){
             if(loginInfo.isUserLogin){
-                $('.J_unlogin').hide();
-                $('.J_logined').children('.loginUser').html(loginInfo.nickName).end().show();
+                unlogin.style.display = 'none';
+                document.getElementById('loginUser').innerHTML = loginInfo.nickName
+                logined.style.display = 'inline';
             }else{
-                $('.J_logined').hide();
-                $('.J_unlogin').show();
+                unlogin.style.display = 'inline';
+                logined.style.display = 'none';
             }
         }
         window.loginInfo = loginInfo;

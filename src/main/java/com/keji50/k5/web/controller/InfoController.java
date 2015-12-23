@@ -132,6 +132,23 @@ public class InfoController {
         model.addAttribute(Constants.RESPONSE_TITLE, author.getNickname() + "的文章_科技50");
         return "page/author/author";
     }
+    
+    @RequestMapping(value = "/show", method = RequestMethod.GET)
+    public String authorInfos(Model model) {
+        // 首页动态栏推荐文章
+        List<InfoPo> suggestInfos = infoService.getSuggestInfos();
+        if (CollectionUtils.isNotEmpty(suggestInfos)) {
+            model.addAttribute(Constants.RESPONSE_INFOS_SUGGEST, suggestInfos);
+        }
+
+        // 热门文章
+        List<InfoPo> hotInfos = infoService.getHotInfos();
+        if (CollectionUtils.isNotEmpty(hotInfos)) {
+            model.addAttribute(Constants.RESPONSE_INFOS_HOT, hotInfos);
+        }
+
+        return "page/show/show";
+    }
 
     @RequestMapping(value = "/p", method = RequestMethod.GET)
     @ResponseBody

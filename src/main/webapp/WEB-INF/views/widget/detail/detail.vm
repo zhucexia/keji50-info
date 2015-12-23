@@ -30,39 +30,9 @@
                     </ul>
                     <div class="single-post-share-list hide-external"><span class="mobile-hide">分享到</span>
                         <div class="share-group">
-                            <a class="weixin mobile-hide" data-stat-hover="weixinfenxiang.click" href="javascript:void(0)" ref="nofollow" target="_blank">
-                                <i class="icon-weixin"></i>
-                                <div class="panel-weixin">
-                                    <section class="weixin-section">
-                                        <p>
-                                            <img alt="$info.title" src="#">
-                                        </p>
-                                    </section>
-                                    <h3>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</h3>
-                                </div>
-                            </a>
-                            <a class="weibo" data-stat-click="weibofenxiang.click" href="" ref="nofollow" target="_blank">
-                                <i class="icon-weibo"></i>
-                            </a>
-                            <a class="linkedin" data-stat-click="linkinfenxiang.click" href="" ref="nofollow" target="_blank">
-                                <i class="icon-linkedin"></i>
-                            </a>
-                            <a class="qq external mobile-hide" data-stat-click="QQfenxiang.click" href="" ref="nofollow" target="_blank">
-                                <i class="icon-qq"></i>
-                            </a>
-                            <a class="twitter external mobile-hide" data-stat-click="twfenxiang.click" href="" ref="nofollow" target="_blank">
-                                <i class="icon-twitter"></i>
-                            </a>
-                            <a class="douban external mobile-hide" data-stat-click="doufanfenxiang.click" href="" ref="nofollow" target="_blank">
-                                <i class="icon-douban"></i>
-                            </a>
-                            <a class="renren external mobile-hide" data-stat-click="renrenfenxiang.click" href="" ref="nofollow" target="_blank">
-                                <i class="icon-renren"></i>
-                            </a>
-                            <a class="evernote external mobile-hide" data-stat-click="EVfenxiang.click" href="" ref="nofollow" target="_blank">
-                                <i class="icon-evernote"></i>
-                            </a>
-                            <a class="icon-add J_showAllShareBtn" data-stat-click="gengduofenxiang.click" href="javascript:void(0);"></a>
+                            <div class="bshare-custom icon-medium-plus"><a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到人人网" class="bshare-renren"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到网易微博" class="bshare-neteasemb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count">0</span></div>
+                            <script src='http://static.bshare.cn/b/buttonLite.js&#35;style=-1&amp;uuid=&amp;pophcol=1&amp;lang=zh'></script>
+                            <script src='http://static.bshare.cn/b/bshareC0.js'></script>
                         </div>
                     </div>
                 </section>
@@ -99,6 +69,13 @@
         </div>
     </div>
 </div>
+#script()
+bShare.addEntry({
+    title: "$info.title",
+    summary: "$info.shortDesc",
+    pic: "$info.image"
+});
+#end
 #script()
     require(['widget/detail/detail'], function(app) {
         app({

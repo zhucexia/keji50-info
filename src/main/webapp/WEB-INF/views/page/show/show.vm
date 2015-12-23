@@ -1,0 +1,18 @@
+<link rel="stylesheet" type="text/css" href="/info/static/page/show/show.css"/>
+<div class="index-wrap">
+	#widget("widget/lightbox/lightbox.vm")
+</div>
+
+<div class="list_wrap">
+		<ul class="clearfix">
+			#foreach($info in $infosHot)
+			<li class="list_item">
+				<a href="$rc.getContextPath()/p/$info.id" class="list_link" target="_blank"><i></i>$info.title<span class="r_date">$info.getCreateDate()</span></a>
+			</li>
+			#end
+		</ul>
+</div>
+
+## 需要依赖一下自己，否则该 vm 中依赖没法自动加载进来。
+#require("page/show/show.vm")
+

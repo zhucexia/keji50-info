@@ -4,6 +4,7 @@
 <div class="article-detail-wrap">
         <div class="main-section">
 			#widget("widget/detail/detail.vm")
+			
             <div class="article-side">
 				#widget("widget/author/author.vm")
 				#widget("widget/hottest/hottest.vm")

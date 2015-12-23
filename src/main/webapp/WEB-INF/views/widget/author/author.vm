@@ -12,7 +12,7 @@
         <h3>最新文章 <i></i></h3>
         #foreach ($infoNearby in $infosNearby)
             <article>
-                <a class="pic" href="$rc.getContextPath()/p/$infoNearby.id" style="background-image: url($infoNearby.image)" target="_blank"></a>
+                <a class="pic" href="$rc.getContextPath()/p/$infoNearby.id" style="background-image: url($infoNearby.image)"></a>
                 <div class="desc"><a class="title" href="$rc.getContextPath()/p/$infoNearby.id" target="_blank">$infoNearby.title</a></div>
             </article>
         #end

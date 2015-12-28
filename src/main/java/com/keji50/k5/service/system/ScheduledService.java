@@ -63,7 +63,7 @@ public class ScheduledService implements InitializingBean, DisposableBean {
                 if (!CollectionUtils.isEmpty(infoCategories)) {
                     infoCategoryService.setInfoCatetories(infoCategories);
 
-                    logger.info("schedule service update infoCategories {}", infoCategories);
+                    logger.info("schedule service update infoCategories {}", infoCategories.size());
                 }
             } catch (Exception e) {
 
@@ -75,7 +75,7 @@ public class ScheduledService implements InitializingBean, DisposableBean {
                 if (!CollectionUtils.isEmpty(hotInfos)) {
                     infoService.setHotInfos(hotInfos);
 
-                    logger.info("schedule service update hotInfos {}", hotInfos);
+                    logger.info("schedule service update hotInfos {}", hotInfos.size());
                 }
             } catch (Exception e) {
 
@@ -87,7 +87,7 @@ public class ScheduledService implements InitializingBean, DisposableBean {
                 if (!CollectionUtils.isEmpty(suggestInfos)) {
                     infoService.setSuggestInfos(suggestInfos);
 
-                    logger.info("schedule service update suggestInfos {}", suggestInfos);
+                    logger.info("schedule service update suggestInfos {}", suggestInfos.size());
                 }
             } catch (Exception e) {
 

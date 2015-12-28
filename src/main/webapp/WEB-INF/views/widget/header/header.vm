@@ -8,7 +8,7 @@
             <a href="$keji50_domain/web?command=ListTutor">导师</a>
             <a href="$keji50_domain/web?command=ListMade">创富集</a>
             <a href="$keji50_domain/web?command=MadeHelp">创业服务</a>
-            <a href="$keji50_domain/web?command=aboutus">关于我们</a>
+            <a href="$keji50_domain/web?command=MadeHelp">关于我们</a>
         </div>
         <div class="topLink_2 fr">
             <div id="J_unlogin">
